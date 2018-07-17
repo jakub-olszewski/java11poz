@@ -16,7 +16,7 @@ cd /d %dev_path%
 %git_app% remote set-url origin https://github.com/jakub-olszewski/%project%.git
 %git_app% config credential.helper "" 
 %git_app% status 
-%git_app% add -A
+%git_app% add . --force
 %git_app% config --global user.email j.b.olszewski@gmail.com
 %git_app% config --global user.name "Jakub Olszewski"
 %git_app% config --global user.username jakub-olszewski
