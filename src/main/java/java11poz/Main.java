@@ -44,6 +44,7 @@ public class Main {
 		// TypZmiennej nazwaZmiennej = wartość
 		Rower mateuszRower = new Rower();
 		Rower juliaRower = new Rower("niebieski");
+		Rower agaRower = new Rower("nazwa");
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int

@@ -9,9 +9,10 @@ package java11poz;
  */
 public class Rower {
 	String kolor = "zielony";
+	String nazwa;// nazwa to właściwość/pole roweru
 
 	/**
-	 * To jest konstruktor bezargumentowy tworzący rower
+	 * To jest konstruktor bezargumentowy tworzący rower o kolorze domyślnym zielony
 	 */
 	public Rower() {
 		// To jest ciało konstruktora
@@ -19,9 +20,28 @@ public class Rower {
 
 	}
 
-	public Rower(String nowyKolor) {
-		kolor = nowyKolor;
-		System.out.println("Konstruowanie roweru o kolorze " + kolor);
+	// /**
+	// * To jest konstruktor tworzący rower o kolorze podanym w argumencie
+	// *
+	// * @param nowyKolor
+	// * to jest argument metody oznaczający nowy kolor, który będzie użyty
+	// * do tworzenia roweru
+	// */
+	// public Rower(String nowyKolor) {
+	// kolor = nowyKolor;
+	// System.out.println("Konstruowanie roweru o kolorze " + kolor);
+	// }
+
+	public Rower(String nazwa, String kolorRoweru) {
+		this.nazwa = nazwa;
+		kolor = kolorRoweru;
+		// nazwa = "romet";
+		System.out.println("Konstruowanie roweru " + nazwa + "o kolorze" + kolor);
+	}
+
+	public Rower(String nazwa) {
+		this.nazwa = nazwa; // słowo this oznacza klasę w której jesteśmy a po kropce
+		// odwołujemy się do pola lub metody
 	}
 
 	// TODO konstruktor z nazwą rowera
