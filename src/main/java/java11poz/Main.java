@@ -41,6 +41,9 @@ public class Main {
 		// TODO zrob metode sumaLiczb a b c i przypisz do zmiennej
 		// dopisac komentarze
 
+		// TypZmiennej nazwaZmiennej = wartość
+		Rower mateuszRower = new Rower();
+		Rower juliaRower = new Rower("niebieski");
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int
