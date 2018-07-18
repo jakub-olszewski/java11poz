@@ -61,6 +61,7 @@ public class Main {
 		kanapkaZSalataZJadalni.wypiszSklad();
 		kanapkaZSalataZJadalni.wypiszSklad();
 		kanapkaZSalataZJadalni.wypiszSklad();
+
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int
