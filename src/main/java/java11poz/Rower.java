@@ -39,6 +39,13 @@ public class Rower {
 		System.out.println("Konstruowanie roweru " + nazwa + "o kolorze" + kolor);
 	}
 
+	/**
+	 * Metoda zwracający stan magazynowy stanu roweru
+	 */
+	public void czyJestNaStanie() {
+		System.out.println("Tak jest na stanie");
+	}
+
 	public Rower(String nazwa) {
 		this.nazwa = nazwa; // słowo this oznacza klasę w której jesteśmy a po kropce
 		// odwołujemy się do pola lub metody

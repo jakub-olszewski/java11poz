@@ -45,6 +45,22 @@ public class Main {
 		Rower mateuszRower = new Rower();
 		Rower juliaRower = new Rower("niebieski");
 		Rower agaRower = new Rower("nazwa");
+		agaRower.czyJestNaStanie();// wywołanie metody czy jest na stanie na obiekcie
+		// agaRower
+
+		// TypZmiennej - Jadalnia
+		// nazwaZmiennej - jadalniaChlopskaWPoznaniu to zmienna zawierajaca
+		// zbior metod z interfejsu Jadalnia
+		Jadalnia jadalniaChlopskaWPoznaniu = new JadalniaChlopskaImpl();
+		// w lini ponizej ze zbioru metod z interfejsu Jadalnia
+		// wykonujemy metode zrobKanapka
+		jadalniaChlopskaWPoznaniu.zrobKanapke().wypiszSklad();
+		jadalniaChlopskaWPoznaniu.zrobKanapke().wypiszSklad();
+		Kanapka kanapkaZSalata = new Kanapka();
+		Kanapka kanapkaZSalataZJadalni = jadalniaChlopskaWPoznaniu.zrobKanapke();
+		kanapkaZSalataZJadalni.wypiszSklad();
+		kanapkaZSalataZJadalni.wypiszSklad();
+		kanapkaZSalataZJadalni.wypiszSklad();
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int
