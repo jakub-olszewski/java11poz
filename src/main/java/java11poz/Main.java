@@ -62,6 +62,11 @@ public class Main {
 		kanapkaZSalataZJadalni.wypiszSklad();
 		kanapkaZSalataZJadalni.wypiszSklad();
 
+		User adaUser = new UserImpl("Ada", "Kowalska");
+		adaUser.setWiek(29);
+		adaUser.wypiszImieINazwisko();
+
+		System.out.println(adaUser.getWiek());
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int
