@@ -23,22 +23,22 @@ public class UserImpl implements User {
 	}
 
 	/**
-	 * metoda ustawiajaca wiek uzytkownika (setter)
+	 * metoda ustawiajaca wiek uzytkownika (setter) potrzebuje argumentu ktory
+	 * ustawiamy
 	 * 
 	 * @param wiek
 	 */
-	@Override
 	public void setWiek(int wiek) {
 		this.wiek = wiek;
 	}
 
 	/**
-	 * metoda pobierajaca wiek uzytkownika (getter)
+	 * metoda pobierajaca wiek uzytkownika (getter) nie potrzebuje argumentu
+	 * poniewaz pobieramy te pole czyli wiek
 	 * 
 	 * @return
 	 */
 	public int getWiek() {
 		return wiek;
 	}
-
 }
