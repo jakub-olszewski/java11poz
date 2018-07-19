@@ -73,6 +73,10 @@ public class Main {
 		adaUser.wypiszImieINazwisko();
 
 		System.out.println(adaUser.getWiek());
+
+		// TODO utworzenie 3 pozycji pobranie cen
+		// wykorzystujac zmienne oraz metode sumaLiczb
+		// wypisz sume zamowienia
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int
