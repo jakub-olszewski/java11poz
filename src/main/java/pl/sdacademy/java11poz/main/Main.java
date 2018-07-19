@@ -78,11 +78,23 @@ public class Main {
 		// TODO utworzenie 3 pozycji pobranie cen
 		// wykorzystujac zmienne oraz metode sumaLiczb
 		// wypisz sume zamowienia
-
+		float sumaWszystkichPozycji = 0;
 		PozycjaZamowienia pozycja1 = new PozycjaZamowienia("Pizza margaritta", 16);
-		pozycja1.getCena();
+		float cenaPoz1 = pozycja1.getCena();
+		// dwie linie poniżej przypisują tą samą wartość do sumy wszystkich pozycji
+		sumaWszystkichPozycji += cenaPoz1;
+		// sumaWszystkichPozycji = sumaWszystkichPozycji + cenaPoz1;
 
-		System.out.println("Suma wynosi: ");
+		PozycjaZamowienia pozycja2 = new PozycjaZamowienia("Sprite 250ml", 6);
+		float cenaPoz2 = pozycja2.getCena();
+		sumaWszystkichPozycji += cenaPoz2;
+		PozycjaZamowienia pozycja3 = new PozycjaZamowienia("Sprite 250ml", 6);
+		float cenaPoz3 = pozycja3.getCena();
+		sumaWszystkichPozycji += cenaPoz3;
+		System.out.println("Suma wynosi: " + sumaCen(cenaPoz1, cenaPoz2, cenaPoz3));
+
+		System.out.println("Suma wynosi: " + sumaWszystkichPozycji);
+
 	}
 
 	// return wystepuje gdy mamy metodę ktora zwraca np int
@@ -98,4 +110,9 @@ public class Main {
 	public static int sumaLiczb(int a, int b) {
 		return a + b;
 	}
+
+	public static float sumaCen(float a, float b, float c) {
+		return a + b + c;
+	}
+
 }
