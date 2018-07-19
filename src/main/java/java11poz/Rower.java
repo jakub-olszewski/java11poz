@@ -51,8 +51,4 @@ public class Rower {
 		// odwołujemy się do pola lub metody
 	}
 
-	// TODO konstruktor z nazwą rowera
-
-	// TODO konsturktor z nazwą rowera i kolorem
-
 }

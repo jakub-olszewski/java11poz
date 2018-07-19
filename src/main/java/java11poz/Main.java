@@ -38,7 +38,6 @@ public class Main {
 
 		System.out.println("suma trzech liczb wynosi " + sumaLiczb(a, b, c));
 		System.out.println("suma trzech liczb wynosi " + sumaLiczb(sumaLiczb(a, b), c));
-		// TODO zrob metode sumaLiczb a b c i przypisz do zmiennej
 		// dopisac komentarze
 
 		// TypZmiennej nazwaZmiennej = wartość
