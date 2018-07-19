@@ -1,4 +1,6 @@
-package java11poz;
+package pl.sdacademy.java11poz.jadalnia;
+
+import pl.sdacademy.java11poz.jadalnia.jedzenie.Kanapka;
 
 /**
  * To jest interfejs, czyli zbiór metod, które są opisane takimi informacjami

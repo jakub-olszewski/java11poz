@@ -1,4 +1,4 @@
-package java11poz;
+package pl.sdacademy.java11poz.pojazdy;
 
 /**
  * Rower to klasa/ obiekt opisująca obiekt, klasa charakteryzyję się tym, że

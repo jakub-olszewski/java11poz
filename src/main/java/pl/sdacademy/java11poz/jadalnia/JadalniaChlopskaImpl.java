@@ -1,4 +1,6 @@
-package java11poz;
+package pl.sdacademy.java11poz.jadalnia;
+
+import pl.sdacademy.java11poz.jadalnia.jedzenie.Kanapka;
 
 public class JadalniaChlopskaImpl implements Jadalnia {
 

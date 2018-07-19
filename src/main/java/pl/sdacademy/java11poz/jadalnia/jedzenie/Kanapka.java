@@ -1,4 +1,4 @@
-package java11poz;
+package pl.sdacademy.java11poz.jadalnia.jedzenie;
 
 /**
  * Klasa opisująca kanapkę

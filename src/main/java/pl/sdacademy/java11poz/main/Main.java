@@ -1,7 +1,14 @@
 /**
  * 
  */
-package java11poz;
+package pl.sdacademy.java11poz.main;
+
+import pl.sdacademy.java11poz.jadalnia.Jadalnia;
+import pl.sdacademy.java11poz.jadalnia.JadalniaChlopskaImpl;
+import pl.sdacademy.java11poz.jadalnia.User;
+import pl.sdacademy.java11poz.jadalnia.UserImpl;
+import pl.sdacademy.java11poz.jadalnia.jedzenie.Kanapka;
+import pl.sdacademy.java11poz.pojazdy.Rower;
 
 /**
  * @author trener

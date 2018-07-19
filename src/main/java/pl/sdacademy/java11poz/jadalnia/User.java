@@ -1,4 +1,4 @@
-package java11poz;
+package pl.sdacademy.java11poz.jadalnia;
 
 /**
  * Interfejs użytkownika opisujący tylko metody
