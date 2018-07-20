@@ -27,10 +27,36 @@ public class ProgramJadalnia {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		// uzytkownik jadalni i dane o nim
 		User juliaUser = new UserImpl("Julia", "Kowalska");
+		juliaUser.setWiek(18);
 		juliaUser.toString(); // metoda 'toString' zwraca String czyli napis;
+
+		/**
+		 * Tworzenie jadalni
+		 */
 		Jadalnia jadalniaChlopska = new JadalniaChlopskaImpl();
+
+		/**
+		 * Notatka poczatek
+		 */
+		// boolean czyUserJestPelnoletni = jadalniaChlopska.czyPelnoletni(juliaUser);
+		//
+		// if (czyUserJestPelnoletni) {
+		// System.out.println(juliaUser.pobierzImieINazwisko() + " jest pelnoletnia");
+		// }
+		//
+		// if (jadalniaChlopska.czyPelnoletni(juliaUser)) {
+		// System.out.println(juliaUser.pobierzImieINazwisko() + " jest pelnoletnia");
+		// }
+		/**
+		 * Notatka koniec
+		 */
+
+		/**
+		 * Tworzenie zamowienia dla Julii
+		 */
 		Zamowienie juliaZamowienie = new Zamowienie(1, 0);
 		// liczba float potrzebuje dopisania literki 'f' na koncu liczby
 		// np. 34.59f
@@ -38,9 +64,17 @@ public class ProgramJadalnia {
 		float sumaZamowienia = 0;
 		sumaZamowienia += pizzaPozycjaZamowienia.getCena();
 		String opisUzytkownika = juliaUser.toString();
+
+		/**
+		 * Wypisanie danych
+		 */
 		System.out.println(opisUzytkownika); // println wypisuje napis na konsoli,
 												// gdzie napisem jest argument
 		System.out.println("Suma zamowienia = " + sumaZamowienia);
+
+		/**
+		 * Konwersje typow
+		 */
 		// int sumaZamowieniaInt = 34.59;
 		// konwersja jawne, ponieważ liczba float zostaje przypisana do
 		// liczby całkowitej, w wyniku czego tracimy dane po przecinku
@@ -56,11 +90,16 @@ public class ProgramJadalnia {
 		// konwersja niejawna, ponieważ sumaZamowienia jest floatem
 		// i konwersja następuje bez utraty danych ponieważ double > float
 		double sumaZamowieniaDouble = sumaZamowienia / 3;
+
+		/**
+		 * Instrukcja warunkowa
+		 */
 		// przed wykonaniem warunku należy ustalić wiek
-		juliaUser.setWiek(18);
 		boolean warunek = juliaUser.getWiek() >= 18;// wiek >= 18
 		// TODO zadanie sprawdz pelnoletnosc uzytkownika
-		if (warunek) {
+		if (juliaUser.getWiek() >= 18) {
+			// if (warunek) {
+
 			// ten kod wykonuje się gdy warunek jest spełniony (jest prawdą)
 			// wypisz jest pelnoletni
 			System.out.println("Uzytkownik jest pelnoletni");

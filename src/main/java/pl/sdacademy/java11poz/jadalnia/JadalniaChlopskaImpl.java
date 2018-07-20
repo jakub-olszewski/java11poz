@@ -23,6 +23,11 @@ public class JadalniaChlopskaImpl implements Jadalnia {
 
 	}
 
+	/**
+	 * Wersja krotka metody w jednej linijce
+	 * @param uzytkownik
+	 * @return
+	 */
 	public boolean czyPelnoletniWJednejLinii(User uzytkownik) {
 		return uzytkownik.getWiek() >= 18;
 	}
