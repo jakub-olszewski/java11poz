@@ -60,4 +60,9 @@ public class UserImpl implements User {
 	public void setMiasto(Miasto miasto) {
 		this.miasto = miasto;
 	}
+
+	@Override
+	public String getImie() {
+		return imie;
+	}
 }

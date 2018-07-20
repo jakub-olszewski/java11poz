@@ -32,7 +32,6 @@ public class ProgramJadalnia {
 		// uzytkownik jadalni i dane o nim
 		User juliaUser = new UserImpl("Julia", "Kowalska", Miasto.POZNAN);
 		juliaUser.setWiek(18);
-
 		juliaUser.toString(); // metoda 'toString' zwraca String czyli napis;
 
 		/**
@@ -143,6 +142,12 @@ public class ProgramJadalnia {
 		if (warunekJestZPoznaniaJestPelnoletnia) {
 			System.out.println("Lokalny smakosz ;)");
 		}
+
+		// uzytkownik jest z Poznania jest pelnoletni oraz ma na imie 'Julia'
+		if (warunekJestZPoznaniaJestPelnoletnia && juliaUser.getImie() == "Julia") {
+			System.out.println("Szefowa ;)");
+		}
+
 	}
 
 }

@@ -32,4 +32,6 @@ public interface User {
 
 	public Miasto getMiasto();
 
+	public String getImie();
+
 }
