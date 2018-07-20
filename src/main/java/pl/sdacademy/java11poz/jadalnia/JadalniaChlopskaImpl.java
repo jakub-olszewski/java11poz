@@ -11,4 +11,20 @@ public class JadalniaChlopskaImpl implements Jadalnia {
 		return new Kanapka();// null to nic, czyli return null zwraca pustą
 	}
 
+	@Override
+	public boolean czyPelnoletni(User uzytkownik) {
+
+		// return zmienna (typ zmiennej zwracanej)
+		int wiek = uzytkownik.getWiek();
+		boolean czyPelnoletni = wiek >= 18;
+		// wynik lini 21 jest taki sam jak 22;
+		return czyPelnoletni;
+		// return uzytkownik.getWiek() >=18;
+
+	}
+
+	public boolean czyPelnoletniWJednejLinii(User uzytkownik) {
+		return uzytkownik.getWiek() >= 18;
+	}
+
 }
