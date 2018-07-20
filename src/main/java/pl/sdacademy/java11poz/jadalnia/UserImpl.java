@@ -1,11 +1,14 @@
 package pl.sdacademy.java11poz.jadalnia;
 
+import java.util.Date;
+
 public class UserImpl implements User {
 
 	String imie;
 	String nazwisko;
 	int wiek;
 	Miasto miasto; // "Miasto" to typ danych wyliczeniowy a "miasto" to nazwa zmiennej
+	Date dataLogowania;
 
 	public String toString() {
 		return pobierzImieINazwisko();
@@ -26,12 +29,15 @@ public class UserImpl implements User {
 	public UserImpl(String imie, String nazwisko) {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
+		this.dataLogowania = new Date();// new Date() obecna data
 	}
 
 	public UserImpl(String imie, String nazwisko, Miasto miasto) {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.miasto = miasto;
+		this.dataLogowania = new Date();// new Date() obecna data
+
 	}
 
 	/**
@@ -64,5 +70,10 @@ public class UserImpl implements User {
 	@Override
 	public String getImie() {
 		return imie;
+	}
+
+	@Override
+	public Date getDataLogowania() {
+		return dataLogowania;
 	}
 }

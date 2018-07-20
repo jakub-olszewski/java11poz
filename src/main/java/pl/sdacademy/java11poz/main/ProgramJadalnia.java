@@ -32,6 +32,7 @@ public class ProgramJadalnia {
 		// uzytkownik jadalni i dane o nim
 		User juliaUser = new UserImpl("Julia", "Kowalska", Miasto.POZNAN);
 		juliaUser.setWiek(18);
+		juliaUser.getDataLogowania();
 		juliaUser.toString(); // metoda 'toString' zwraca String czyli napis;
 
 		/**

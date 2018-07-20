@@ -1,5 +1,7 @@
 package pl.sdacademy.java11poz.jadalnia;
 
+import java.util.Date;
+
 /**
  * Interfejs użytkownika opisujący tylko metody
  * 
@@ -33,5 +35,7 @@ public interface User {
 	public Miasto getMiasto();
 
 	public String getImie();
+
+	public Date getDataLogowania();
 
 }
