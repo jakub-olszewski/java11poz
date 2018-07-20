@@ -5,6 +5,7 @@ package pl.sdacademy.java11poz.main;
 
 import pl.sdacademy.java11poz.jadalnia.Jadalnia;
 import pl.sdacademy.java11poz.jadalnia.JadalniaChlopskaImpl;
+import pl.sdacademy.java11poz.jadalnia.Miasto;
 import pl.sdacademy.java11poz.jadalnia.PozycjaZamowienia;
 import pl.sdacademy.java11poz.jadalnia.User;
 import pl.sdacademy.java11poz.jadalnia.UserImpl;
@@ -29,8 +30,9 @@ public class ProgramJadalnia {
 	public static void main(String[] args) {
 
 		// uzytkownik jadalni i dane o nim
-		User juliaUser = new UserImpl("Julia", "Kowalska");
+		User juliaUser = new UserImpl("Julia", "Kowalska", Miasto.POZNAN);
 		juliaUser.setWiek(18);
+
 		juliaUser.toString(); // metoda 'toString' zwraca String czyli napis;
 
 		/**
@@ -108,6 +110,38 @@ public class ProgramJadalnia {
 			// ten kod wykonuje się gdy NIE JEST spełniony (jest fałszem)
 			// wypisz nie jest pelnoletni
 			System.out.println("Uzytkownik nie jest pelnoletni");
+		}
+
+		/**
+		 * Instrukcja warunkowa sprawdzanie czy uzytkownik jest z Poznania
+		 */
+		boolean warunekCzyZPoznania = jadalniaChlopska.czyZPoznania(juliaUser);
+		// boolean warunekCzyZPoznaniaBezInterfejsu = juliaUser.getMiasto() ==
+		// Miasto.POZNAN;
+
+		if (warunekCzyZPoznania) {
+			// if (warunek) {
+
+			// ten kod wykonuje się gdy warunek jest spełniony (jest prawdą)
+			// wypisz jest pelnoletni
+			System.out.println("Uzytkownik jest z Poznania");
+		}
+		else {
+			// ten kod wykonuje się gdy NIE JEST spełniony (jest fałszem)
+			// wypisz nie jest pelnoletni
+			System.out.println(
+					"Uzytkownik nie jest z Poznania, jest z " + juliaUser.getMiasto());
+		}
+
+		// && oznacza i
+		// || oznacza lub
+		boolean warunekJestZPoznaniaJestPelnoletnia = jadalniaChlopska
+				.czyPelnoletni(juliaUser) && jadalniaChlopska.czyZPoznania(juliaUser);
+		/**
+		 * Instrukcja warunkowa czy jest z Poznania i jest pełnoletnia
+		 */
+		if (warunekJestZPoznaniaJestPelnoletnia) {
+			System.out.println("Lokalny smakosz ;)");
 		}
 	}
 

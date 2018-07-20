@@ -20,4 +20,11 @@ public interface Jadalnia {
 	// widocznosc typZmiennejZwracanej nazwaMetody(typArgumentu argument)
 	boolean czyPelnoletni(User uzytkownik);
 
+	/**
+	 * metoda która sprawdza czy użytkownik jest z Poznania
+	 * @param uzytkownik z jadalni
+	 * @return prawda jeśli jest z Poznania a fałsz jeśli nie jest z Poznania
+	 */
+	boolean czyZPoznania(User uzytkownik);
+
 }

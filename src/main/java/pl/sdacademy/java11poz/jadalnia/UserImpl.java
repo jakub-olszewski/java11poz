@@ -5,6 +5,7 @@ public class UserImpl implements User {
 	String imie;
 	String nazwisko;
 	int wiek;
+	Miasto miasto; // "Miasto" to typ danych wyliczeniowy a "miasto" to nazwa zmiennej
 
 	public String toString() {
 		return pobierzImieINazwisko();
@@ -27,6 +28,12 @@ public class UserImpl implements User {
 		this.nazwisko = nazwisko;
 	}
 
+	public UserImpl(String imie, String nazwisko, Miasto miasto) {
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.miasto = miasto;
+	}
+
 	/**
 	 * metoda ustawiajaca wiek uzytkownika (setter) potrzebuje argumentu ktory ustawiamy
 	 * 
@@ -44,5 +51,13 @@ public class UserImpl implements User {
 	 */
 	public int getWiek() {
 		return wiek;
+	}
+
+	public Miasto getMiasto() {
+		return miasto;
+	}
+
+	public void setMiasto(Miasto miasto) {
+		this.miasto = miasto;
 	}
 }

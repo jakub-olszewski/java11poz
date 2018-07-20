@@ -32,4 +32,16 @@ public class JadalniaChlopskaImpl implements Jadalnia {
 		return uzytkownik.getWiek() >= 18;
 	}
 
+	@Override
+	public boolean czyZPoznania(User uzytkownik) {
+		Miasto miastoUzytkownika = uzytkownik.getMiasto();
+		return miastoUzytkownika == Miasto.POZNAN;
+
+	}
+
+	public boolean czyZPoznaniaWJednejLinii(User uzytkownik) {
+		return uzytkownik.getMiasto() == Miasto.POZNAN;
+
+	}
+
 }

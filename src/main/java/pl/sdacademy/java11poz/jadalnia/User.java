@@ -8,8 +8,7 @@ package pl.sdacademy.java11poz.jadalnia;
  */
 public interface User {
 	/**
-	 * metoda wypisująca informacje o użytkowniku, metody w interfejsie nie
-	 * zawierają "{}"
+	 * metoda wypisująca informacje o użytkowniku, metody w interfejsie nie zawierają "{}"
 	 * 
 	 * @return opis
 	 */
@@ -30,5 +29,7 @@ public interface User {
 	public int getWiek();
 
 	void setWiek(int wiek);
+
+	public Miasto getMiasto();
 
 }
