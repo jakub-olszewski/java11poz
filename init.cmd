@@ -7,7 +7,15 @@ set desktop_path=%userprofile%\desktop\
 set dev_local=%userprofile%\desktop\dev\
 set git_app=%dev_local%apps\git\bin\git.exe
 
-REM set git_app="C:\Program Files\Git\bin\git.exe"
+IF NOT EXIST %dev_local%apps\git\bin\git.exe (
+		set git_app="C:\Program Files\Git\bin\git.exe"
+        timeout /T3
+)
+
+IF NOT EXIST "C:\Program Files\Git\bin\git.exe" (
+		echo git executable is missing! Please install git
+        pause
+)
 
 
 set mvn_app=%dev_local%apps\apache-maven-3.5.2\bin\mvn

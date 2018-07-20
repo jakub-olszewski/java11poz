@@ -5,6 +5,17 @@ set project=java11poz
 set dev_path=%~dp0
 set dev_local=%userprofile%\desktop\dev\
 set git_app=%dev_local%apps\git\bin\git.exe
+
+IF NOT EXIST %dev_local%apps\git\bin\git.exe (
+		set git_app="C:\Program Files\Git\bin\git.exe"
+        timeout /T3
+)
+
+IF NOT EXIST "C:\Program Files\Git\bin\git.exe" (
+		echo git executable is missing! Please install git
+        pause
+)
+
 set mvn_app=%dev_local%apps\apache-maven-3.5.2\bin\mvn
 set JAVA_HOME=%dev_local%java\jdk1.8.0_152
 set chrome_app=%dev_local%apps\GoogleChromePortable\GoogleChromePortable.exe
