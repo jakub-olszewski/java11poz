@@ -41,7 +41,30 @@ public class ProgramJadalnia {
 		System.out.println(opisUzytkownika); // println wypisuje napis na konsoli,
 												// gdzie napisem jest argument
 		System.out.println("Suma zamowienia = " + sumaZamowienia);
+		// int sumaZamowieniaInt = 34.59;
+		// konwersja jawne, ponieważ liczba float zostaje przypisana do
+		// liczby całkowitej, w wyniku czego tracimy dane po przecinku
+		int sumaZamowieniaInt = (int) sumaZamowienia;
+		System.out.println("Suma zamowienia = " + sumaZamowieniaInt);
+		// konwersja jawna, ponieważ liczba float podzielona przez 3
+		// dalej jest floatem, a liczba sumaZamowieniaInt jest liczbą
+		// całkowitą, w wyniku czego tracimy dane po przecinku
+		sumaZamowieniaInt = (int) (sumaZamowienia / 3);
+		// nie występuje konwersja, ponieważ sumaZamowienia
+		// i sumaZamowieniaFloat są tego samego typu
+		float sumaZamowieniaFloat = sumaZamowienia / 3;
+		// konwersja niejawna, ponieważ sumaZamowienia jest floatem
+		// i konwersja następuje bez utraty danych ponieważ double > float
+		double sumaZamowieniaDouble = sumaZamowienia / 3;
 
+		boolean warunek = false;
+		// TODO zadanie sprawdz pelnoletnosc uzytkownika
+		if (warunek) {
+			// wypisz jest pelnoletni
+		}
+		else {
+			// wypisz nie jest pelnoletni
+		}
 	}
 
 }
