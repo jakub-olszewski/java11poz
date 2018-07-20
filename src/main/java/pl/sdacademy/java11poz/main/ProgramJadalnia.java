@@ -56,15 +56,19 @@ public class ProgramJadalnia {
 		// konwersja niejawna, ponieważ sumaZamowienia jest floatem
 		// i konwersja następuje bez utraty danych ponieważ double > float
 		double sumaZamowieniaDouble = sumaZamowienia / 3;
-
-		boolean warunek = false;// wiek >= 18
-		juliaUser.setWiek(17);
+		// przed wykonaniem warunku należy ustalić wiek
+		juliaUser.setWiek(18);
+		boolean warunek = juliaUser.getWiek() >= 18;// wiek >= 18
 		// TODO zadanie sprawdz pelnoletnosc uzytkownika
 		if (warunek) {
+			// ten kod wykonuje się gdy warunek jest spełniony (jest prawdą)
 			// wypisz jest pelnoletni
+			System.out.println("Uzytkownik jest pelnoletni");
 		}
 		else {
+			// ten kod wykonuje się gdy NIE JEST spełniony (jest fałszem)
 			// wypisz nie jest pelnoletni
+			System.out.println("Uzytkownik nie jest pelnoletni");
 		}
 	}
 
