@@ -6,6 +6,10 @@ set dev_path=%~dp0
 set desktop_path=%userprofile%\desktop\
 set dev_local=%userprofile%\desktop\dev\
 set git_app=%dev_local%apps\git\bin\git.exe
+
+REM set git_app="C:\Program Files\Git\bin\git.exe"
+
+
 set mvn_app=%dev_local%apps\apache-maven-3.5.2\bin\mvn
 set JAVA_HOME=%dev_local%java\jdk1.8.0_152
 set chrome_app=%dev_local%apps\GoogleChromePortable\GoogleChromePortable.exe

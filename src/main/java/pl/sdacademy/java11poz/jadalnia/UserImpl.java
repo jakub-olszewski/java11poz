@@ -6,6 +6,11 @@ public class UserImpl implements User {
 	String nazwisko;
 	int wiek;
 
+	public String toString() {
+		return pobierzImieINazwisko();
+
+	}
+
 	public String pobierzImieINazwisko() {
 		return imie + " " + nazwisko;
 
@@ -23,8 +28,7 @@ public class UserImpl implements User {
 	}
 
 	/**
-	 * metoda ustawiajaca wiek uzytkownika (setter) potrzebuje argumentu ktory
-	 * ustawiamy
+	 * metoda ustawiajaca wiek uzytkownika (setter) potrzebuje argumentu ktory ustawiamy
 	 * 
 	 * @param wiek
 	 */
@@ -33,8 +37,8 @@ public class UserImpl implements User {
 	}
 
 	/**
-	 * metoda pobierajaca wiek uzytkownika (getter) nie potrzebuje argumentu
-	 * poniewaz pobieramy te pole czyli wiek
+	 * metoda pobierajaca wiek uzytkownika (getter) nie potrzebuje argumentu poniewaz
+	 * pobieramy te pole czyli wiek
 	 * 
 	 * @return
 	 */
