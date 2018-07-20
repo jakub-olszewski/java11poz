@@ -57,7 +57,8 @@ public class ProgramJadalnia {
 		// i konwersja następuje bez utraty danych ponieważ double > float
 		double sumaZamowieniaDouble = sumaZamowienia / 3;
 
-		boolean warunek = false;
+		boolean warunek = false;// wiek >= 18
+		juliaUser.setWiek(17);
 		// TODO zadanie sprawdz pelnoletnosc uzytkownika
 		if (warunek) {
 			// wypisz jest pelnoletni
