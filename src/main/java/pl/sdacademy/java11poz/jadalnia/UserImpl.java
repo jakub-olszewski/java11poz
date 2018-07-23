@@ -88,6 +88,5 @@ public class UserImpl implements User {
 	@Override
 	public void wypiszStatus() {
 		// TODO wypisz status syso
-
 	}
 }
