@@ -7,11 +7,11 @@ import java.util.Date;
 
 import pl.sdacademy.java11poz.jadalnia.Jadalnia;
 import pl.sdacademy.java11poz.jadalnia.JadalniaChlopskaImpl;
-import pl.sdacademy.java11poz.jadalnia.Miasto;
 import pl.sdacademy.java11poz.jadalnia.PozycjaZamowienia;
 import pl.sdacademy.java11poz.jadalnia.User;
 import pl.sdacademy.java11poz.jadalnia.UserImpl;
 import pl.sdacademy.java11poz.jadalnia.Zamowienie;
+import pl.sdacademy.java11poz.jadalnia.enums.Miasto;
 
 /**
  * @author trener

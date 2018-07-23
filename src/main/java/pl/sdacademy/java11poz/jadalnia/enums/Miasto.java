@@ -1,4 +1,4 @@
-package pl.sdacademy.java11poz.jadalnia;
+package pl.sdacademy.java11poz.jadalnia.enums;
 
 /**
  * Miasto to typ danych wyliczeniowy posiadający listę miast

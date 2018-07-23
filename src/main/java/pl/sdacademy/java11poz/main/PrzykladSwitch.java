@@ -3,9 +3,9 @@
  */
 package pl.sdacademy.java11poz.main;
 
-import pl.sdacademy.java11poz.jadalnia.Miasto;
 import pl.sdacademy.java11poz.jadalnia.User;
 import pl.sdacademy.java11poz.jadalnia.UserImpl;
+import pl.sdacademy.java11poz.jadalnia.enums.Miasto;
 
 /**
  * @author trener

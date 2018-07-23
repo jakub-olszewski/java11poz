@@ -2,6 +2,8 @@ package pl.sdacademy.java11poz.jadalnia;
 
 import java.util.Date;
 
+import pl.sdacademy.java11poz.jadalnia.enums.Miasto;
+
 /**
  * Interfejs użytkownika opisujący tylko metody
  * 

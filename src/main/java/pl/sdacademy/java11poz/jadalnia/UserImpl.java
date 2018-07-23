@@ -2,7 +2,8 @@ package pl.sdacademy.java11poz.jadalnia;
 
 import java.util.Date;
 
-import javax.net.ssl.SSLEngineResult.Status;
+import pl.sdacademy.java11poz.jadalnia.enums.Miasto;
+import pl.sdacademy.java11poz.jadalnia.enums.Status;
 
 public class UserImpl implements User {
 	// ponizej znajduje sie lista pol
@@ -24,7 +25,6 @@ public class UserImpl implements User {
 
 	public String pobierzImieINazwisko() {
 		return imie + " " + nazwisko;
-
 	}
 
 	@Override
@@ -43,8 +43,8 @@ public class UserImpl implements User {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.miasto = miasto;
+		this.status = Status.NIEAKTYWNY;
 		this.dataLogowania = new Date();// new Date() obecna data
-
 	}
 
 	/**
@@ -84,9 +84,43 @@ public class UserImpl implements User {
 		return dataLogowania;
 	}
 
+	/**
+	 * Metoda wypisujaca status z uzyciem funkcji switch
+	 */
 	@Override
 	public void wypiszStatus() {
 		// TODO wypisz status syso
+		if (status == null) {
+			System.out.println("status jest null");
+			return;
+		}
+		else {
+			switch (status) {
+			case DOSTEPNY:
+				System.out.println("status: dostepny");
+				break;
+			case NIEDOSTEPNY:
+				System.out.println("status: niedostepny");
+				break;
+
+			case NIEAKTYWNY:
+				System.out.println("Status: nieaktywny, proszę o aktywacje konta");
+				break;
+
+			default:
+				System.out.println("Status: pusty, brak statusu");
+				break;
+			}
+
+		}
+
+	}
+
+	/**
+	 * Wypisanie statusu
+	 */
+	public void wypiszStatus2() {
+		System.out.println("Status: " + status);
 	}
 
 	public Status getStatus() {
