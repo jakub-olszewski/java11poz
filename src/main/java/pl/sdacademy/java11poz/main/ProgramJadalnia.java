@@ -3,6 +3,8 @@
  */
 package pl.sdacademy.java11poz.main;
 
+import java.util.Date;
+
 import pl.sdacademy.java11poz.jadalnia.Jadalnia;
 import pl.sdacademy.java11poz.jadalnia.JadalniaChlopskaImpl;
 import pl.sdacademy.java11poz.jadalnia.Miasto;
@@ -21,7 +23,6 @@ public class ProgramJadalnia {
 	 * 
 	 */
 	public ProgramJadalnia() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -32,7 +33,10 @@ public class ProgramJadalnia {
 		// uzytkownik jadalni i dane o nim
 		User juliaUser = new UserImpl("Julia", "Kowalska", Miasto.POZNAN);
 		juliaUser.setWiek(18);
-		juliaUser.getDataLogowania();
+		Date dataLogowaniaJulii = juliaUser.getDataLogowania();
+		System.out.println(dataLogowaniaJulii);
+		// TODO wykorzystanie formatera daty
+
 		juliaUser.toString(); // metoda 'toString' zwraca String czyli napis;
 
 		/**
@@ -98,7 +102,6 @@ public class ProgramJadalnia {
 		 */
 		// przed wykonaniem warunku należy ustalić wiek
 		boolean warunek = juliaUser.getWiek() >= 18;// wiek >= 18
-		// TODO zadanie sprawdz pelnoletnosc uzytkownika
 		if (juliaUser.getWiek() >= 18) {
 			// if (warunek) {
 

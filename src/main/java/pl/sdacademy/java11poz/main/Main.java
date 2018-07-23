@@ -75,7 +75,6 @@ public class Main {
 
 		System.out.println(adaUser.getWiek());
 
-		// TODO utworzenie 3 pozycji pobranie cen
 		// wykorzystujac zmienne oraz metode sumaLiczb
 		// wypisz sume zamowienia
 		float sumaWszystkichPozycji = 0;
