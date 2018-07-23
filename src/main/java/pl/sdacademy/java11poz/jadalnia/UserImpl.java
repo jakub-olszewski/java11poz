@@ -5,18 +5,17 @@ import java.util.Date;
 import javax.net.ssl.SSLEngineResult.Status;
 
 public class UserImpl implements User {
-
+	// ponizej znajduje sie lista pol
 	String imie;
 	String nazwisko;
 	int wiek;
 	Miasto miasto; // "Miasto" to typ danych wyliczeniowy a "miasto" to nazwa zmiennej
 	Date dataLogowania;
-	// TODO stworzyc enum Status [DOSTEPNY,NIEDOSTEPNY,NIEAKTYWNY]
+
 	// - tak jak w przypadku enum Miasto
 	// w kostruktorze dopisac domyslny status - DOSTEPNY
 	Status status;
-
-	// TODO getter i setter status
+	// tutaj konczy sie lista pol
 
 	public String toString() {
 		return pobierzImieINazwisko();
@@ -88,5 +87,13 @@ public class UserImpl implements User {
 	@Override
 	public void wypiszStatus() {
 		// TODO wypisz status syso
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 }
