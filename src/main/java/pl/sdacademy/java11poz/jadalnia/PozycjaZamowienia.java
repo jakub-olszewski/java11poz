@@ -28,4 +28,9 @@ public class PozycjaZamowienia {
 		this.nazwa = nazwa;
 	}
 
+	@Override
+	public String toString() {
+		return "PozycjaZamowienia [cena=" + cena + ", nazwa=" + nazwa + "]";
+	}
+
 }
