@@ -27,6 +27,12 @@ public class FormatDaty {
 	public static void main(String[] args) throws ParseException {
 
 		// "dd.MM.yyyy HH:mm:ss"
+		wypiszDateWFormacie("2018-07-23", "yyyy-MM-dd");
+		wypiszDateWFormacie("23.07.2018 16:05:00", "dd.MM.yyyy HH:mm:ss");
+
+		// błędny format
+		wypiszDateWFormacie("kurs", "dd.MM.ss");
+
 	}
 
 	/**
