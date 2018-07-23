@@ -48,10 +48,13 @@ public class Tablice {
 		System.out.println(tablicaLiczb[2]);
 
 		// TODO utworz tablice miast
+		// indeks podczas tworzenia 10
+		// daje na 10 pozycji od 0 do 9
 		Miasto[] tablicaMiast = new Miasto[10];
 
-		tablicaMiast[0] = Miasto.POZNAN;
-		System.out.println(tablicaMiast[0]);
+		// 10 pozycja jest poza zakresem
+		tablicaMiast[10] = Miasto.POZNAN;
+		System.out.println(tablicaMiast[10]);
 
 	}
 
