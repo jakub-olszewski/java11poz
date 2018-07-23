@@ -38,4 +38,6 @@ public interface User {
 
 	public Date getDataLogowania();
 
+	public void wypiszStatus();
+
 }

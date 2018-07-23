@@ -35,8 +35,6 @@ public class ProgramJadalnia {
 		juliaUser.setWiek(18);
 		Date dataLogowaniaJulii = juliaUser.getDataLogowania();
 		System.out.println(dataLogowaniaJulii);
-		// TODO wykorzystanie formatera daty
-
 		juliaUser.toString(); // metoda 'toString' zwraca String czyli napis;
 
 		/**

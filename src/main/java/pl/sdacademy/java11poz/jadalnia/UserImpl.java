@@ -2,6 +2,8 @@ package pl.sdacademy.java11poz.jadalnia;
 
 import java.util.Date;
 
+import javax.net.ssl.SSLEngineResult.Status;
+
 public class UserImpl implements User {
 
 	String imie;
@@ -9,6 +11,12 @@ public class UserImpl implements User {
 	int wiek;
 	Miasto miasto; // "Miasto" to typ danych wyliczeniowy a "miasto" to nazwa zmiennej
 	Date dataLogowania;
+	// TODO stworzyc enum Status [DOSTEPNY,NIEDOSTEPNY,NIEAKTYWNY]
+	// - tak jak w przypadku enum Miasto
+	// w kostruktorze dopisac domyslny status - DOSTEPNY
+	Status status;
+
+	// TODO getter i setter status
 
 	public String toString() {
 		return pobierzImieINazwisko();
@@ -75,5 +83,11 @@ public class UserImpl implements User {
 	@Override
 	public Date getDataLogowania() {
 		return dataLogowania;
+	}
+
+	@Override
+	public void wypiszStatus() {
+		// TODO wypisz status syso
+
 	}
 }

@@ -17,7 +17,6 @@ public class FormatDaty {
 	 * 
 	 */
 	public FormatDaty() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

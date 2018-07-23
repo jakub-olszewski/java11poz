@@ -17,14 +17,12 @@ public class PrzykladSwitch {
 	 * 
 	 */
 	public PrzykladSwitch() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		User joannaUser = new UserImpl("Joanna", "Nowak", Miasto.WARSZAWA);
 		Miasto miastoUser = joannaUser.getMiasto();
@@ -46,16 +44,15 @@ public class PrzykladSwitch {
 			System.out.println("User nie wiem skąd");
 		}
 
-		char ocena = 'A';
+		char ocena = 'p';
 
 		switch (ocena) {
 		case 'A':
 			System.out.println("Świetnie");
-			// break;
+			break;
 		case 'B':
 		case 'C':
 			System.out.println("Dobrze");
-
 			break;
 		case 'D':
 			System.out.println("Zdałeś!");
@@ -64,6 +61,8 @@ public class PrzykladSwitch {
 			System.out.println("Będzie poprawka");
 			break;
 		default:
+			// domyślny blok kody w przypadku nie spelnienia wczesniejszych warunkow
+			System.out.println("Nie wiem co z Tobą będzie");
 			break;
 		}
 	}
