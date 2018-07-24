@@ -30,7 +30,9 @@ public class ProgramJadalnia {
 	 */
 	public static void main(String[] args) {
 
-		// uzytkownik jadalni i dane o nim
+		/**
+		 * uzytkownik jadalni i dane o nim
+		 */
 		User juliaUser = new UserImpl("Julia", "Kowalska", Miasto.POZNAN);
 		juliaUser.setWiek(18);
 		juliaUser.wypiszStatus();
@@ -66,6 +68,8 @@ public class ProgramJadalnia {
 		// liczba float potrzebuje dopisania literki 'f' na koncu liczby
 		// np. 34.59f
 		PozycjaZamowienia pizzaPozycjaZamowienia = new PozycjaZamowienia("Pizza", 34.59f);
+		juliaZamowienie.dodajPozycje(pizzaPozycjaZamowienia);
+		juliaZamowienie.dodajPozycje(new PozycjaZamowienia("Cola", 5));
 		float sumaZamowienia = 0;
 		sumaZamowienia += pizzaPozycjaZamowienia.getCena();
 		String opisUzytkownika = juliaUser.toString();

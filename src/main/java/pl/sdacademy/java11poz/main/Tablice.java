@@ -56,6 +56,8 @@ public class Tablice {
 		tablicaMiast[10] = Miasto.POZNAN;
 		System.out.println(tablicaMiast[10]);
 
+		// W i Zorro ?
+
 	}
 
 }

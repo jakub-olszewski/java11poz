@@ -39,12 +39,19 @@ public class UserImpl implements User {
 		this.dataLogowania = new Date();// new Date() obecna data
 	}
 
+	/**
+	 * konstruktor tworzący użytkownika
+	 * @param imie użytkownika
+	 * @param nazwisko użytkownika
+	 * @param miasto użytkownika
+	 */
 	public UserImpl(String imie, String nazwisko, Miasto miasto) {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.miasto = miasto;
 		this.status = Status.NIEAKTYWNY;
 		this.dataLogowania = new Date();// new Date() obecna data
+
 	}
 
 	/**
