@@ -20,6 +20,8 @@ public class Zamowienie {
 	public Zamowienie(int numerZamowienia, float suma) {
 		this.numerZamowienia = numerZamowienia;
 		this.suma = suma;
+		// inicjalizacja interfejsu Set
+		// HashSet to implementacja Set'a
 		this.pozycje = new HashSet();
 	}
 
@@ -29,7 +31,7 @@ public class Zamowienie {
 	// pole suma
 	float suma;
 
-	// zbiór pozycji zamowienia
+	// zbiór pozycji zamowienia Set - to interfejs
 	Set pozycje;
 
 	public int getNumerZamowienia() {
@@ -48,7 +50,10 @@ public class Zamowienie {
 		this.suma = suma;
 	}
 
-	// TODO metoda dododawania pozycji
+	/**
+	 * metoda dododawania pozycji
+	 * @param pozycja zamowienia
+	 */
 	public void dodajPozycje(PozycjaZamowienia pozycja) {
 		pozycje.add(pozycja);
 

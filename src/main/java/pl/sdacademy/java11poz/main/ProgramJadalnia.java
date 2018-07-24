@@ -7,6 +7,7 @@ import java.util.Date;
 
 import pl.sdacademy.java11poz.jadalnia.Jadalnia;
 import pl.sdacademy.java11poz.jadalnia.JadalniaChlopskaImpl;
+import pl.sdacademy.java11poz.jadalnia.MapaPozycjiZamowienia;
 import pl.sdacademy.java11poz.jadalnia.PozycjaZamowienia;
 import pl.sdacademy.java11poz.jadalnia.User;
 import pl.sdacademy.java11poz.jadalnia.UserImpl;
@@ -67,11 +68,13 @@ public class ProgramJadalnia {
 		Zamowienie juliaZamowienie = new Zamowienie(1, 0);
 		// liczba float potrzebuje dopisania literki 'f' na koncu liczby
 		// np. 34.59f
-		PozycjaZamowienia pizzaPozycjaZamowienia = new PozycjaZamowienia("Pizza", 34.59f);
-		juliaZamowienie.dodajPozycje(pizzaPozycjaZamowienia);
+
+		MapaPozycjiZamowienia pozycjeMapa = new MapaPozycjiZamowienia();
+
+		juliaZamowienie.dodajPozycje(pozycjeMapa.pobierzPozycje("pizza1"));
 		juliaZamowienie.dodajPozycje(new PozycjaZamowienia("Cola", 5));
 		float sumaZamowienia = 0;
-		sumaZamowienia += pizzaPozycjaZamowienia.getCena();
+		// sumaZamowienia += pizzaPozycjaZamowienia.getCena();
 		String opisUzytkownika = juliaUser.toString();
 
 		/**
