@@ -9,14 +9,24 @@ import java.util.Map;
  *
  */
 public class MapaPozycjiZamowienia {
-	Map pozycje;
+	// deklaracja zmiennej pozycjaMap przy użyciu interfejsu Map
+	Map<String, PozycjaZamowienia> pozycjeMapa;
 
+	/**
+	 * konstruktor tworzący mapę pozycji
+	 */
 	public MapaPozycjiZamowienia() {
-		this.pozycje = new HashMap();
-		pozycje.put("pizza1", new PozycjaZamowienia("Pizza Margarita", 15.50f));
-		pozycje.put("pizza2", new PozycjaZamowienia("Pizza Poznańska", 17.50f));
-		pozycje.put("pizza3", new PozycjaZamowienia("Pizza Krakowska", 20.50f));
+		// inicjalizacja mapyPozycji
+		this.pozycjeMapa = new HashMap<String, PozycjaZamowienia>();
+		// zmiennaMapa.put(klucz, wartość);
+		pozycjeMapa.put("pizza1", new PozycjaZamowienia("Pizza Margarita", 15.50f));
+		pozycjeMapa.put("pizza2", new PozycjaZamowienia("Pizza Poznańska", 17.50f));
+		pozycjeMapa.put("pizza3", new PozycjaZamowienia("Pizza Krakowska", 20.50f));
 
+	}
+
+	public PozycjaZamowienia pobierzPozycje(String kluczPozycji) {
+		return pozycjeMapa.get(kluczPozycji);
 	}
 
 }
