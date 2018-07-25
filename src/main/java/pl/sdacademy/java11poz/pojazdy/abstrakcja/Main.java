@@ -12,15 +12,30 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Deskorolka juliaDeskorolka = new Deskorolka(4, "Kauczuk");
-		Hulajnoga juliaHulajnoga = new Hulajnoga(200, 150);
-		Samochod juliaSamochod = new Samochod(40, 3, 2);
+		Pojazd juliaDeskorolka = new Deskorolka(4, "Kauczuk");
+		Pojazd juliaHulajnoga = new Hulajnoga(200, 150);
+		Pojazd juliaSamochod = new Samochod(40, 3, 2);
 
-		List listaDeskorolek = new ArrayList<>();
-		List listaHulanoga = new ArrayList<>();
-		List listaSamochod = new ArrayList<>();
+		List<Pojazd> pojazdy = new ArrayList<Pojazd>();
+		pojazdy.add(juliaDeskorolka);
+		pojazdy.add(juliaHulajnoga);
+		pojazdy.add(juliaSamochod);
 
-		juliaDeskorolka.poruszajSie();
+		for (Pojazd pojazd : pojazdy) {
+			pojazd.wypiszNazwe();
+		}
+
+		// juliaDeskorolka.poruszajSie();
+		juliaDeskorolka.wypiszNazwe();
+
+		int liczbaInt = 5;
+
+		double liczbaDouble = (double) liczbaInt;
+		Deskorolka deskorolka = (Deskorolka) juliaDeskorolka;
+
+		deskorolka.poruszajSie();// wymuszenie
+		deskorolka.zatrzymajSie();
+
 		juliaHulajnoga.poruszajSie();
 		juliaSamochod.poruszajSie();
 

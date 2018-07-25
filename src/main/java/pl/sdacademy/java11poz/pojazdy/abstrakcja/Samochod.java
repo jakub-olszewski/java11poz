@@ -3,11 +3,15 @@ package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 import java.util.Date;
 
 public class Samochod {
-	String nazwa;
-	Date rokProdukcji;
 	int zbiornikPaliwa;
 	int liczbaDrzwi;
 	int iloscMiejsc;
+	String nazwa;
+	Date rokProdukcji;
+
+	public void wypiszNazwe() {
+		System.out.println("Pojazd:" + nazwa);
+	}
 
 	public void poruszajSie() {
 		System.out.println("Samochód porusza się");
@@ -22,5 +26,13 @@ public class Samochod {
 		this.zbiornikPaliwa = zbiornikPaliwa;
 		this.liczbaDrzwi = liczbaDrzwi;
 		this.iloscMiejsc = iloscMiejsc;
+	}
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
 	}
 }

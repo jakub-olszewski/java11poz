@@ -8,6 +8,10 @@ public class Hulajnoga {
 	float dlugosc;
 	float wysokosc;
 
+	public void wypiszNazwe() {
+		System.out.println("Pojazd:" + nazwa);
+	}
+
 	public Hulajnoga(float dlugosc, float wysokosc) {
 		super();
 		this.dlugosc = dlugosc;
@@ -20,5 +24,13 @@ public class Hulajnoga {
 
 	public void zatrzymajSie() {
 		System.out.println("Hulajnoga zatrzymała się");
+	}
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
 	}
 }

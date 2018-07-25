@@ -1,12 +1,20 @@
 package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
-import java.util.Date;
-
-public class Deskorolka {
-	String nazwa;
-	Date rokProdukcji;
+/**
+ * Deskorolka rozszerza/dziedziczy pola oraz metody po klasie Pojazdy </br>
+ * uwaga zakomentowane linie sa czesciami powtarzajacymi sie z klasa Pojazdy
+ * @author trener
+ *
+ */
+public class Deskorolka extends Pojazd {
+	// String nazwa;
+	// Date rokProdukcji;
 	int liczbaKol;
 	String rodzajKol;
+
+	// public void wypiszNazwe() {
+	// System.out.println("Pojazd:" + nazwa);
+	// }
 
 	public void poruszajSie() {
 		System.out.println("Jedzie deskorolka");
@@ -20,6 +28,18 @@ public class Deskorolka {
 		super();
 		this.liczbaKol = liczbaKol;
 		this.rodzajKol = rodzajKol;
+	}
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void juliaDeskorolka(String nazwa) {
+		this.nazwa = nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
 	}
 
 }

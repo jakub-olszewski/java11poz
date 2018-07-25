@@ -2,7 +2,7 @@ package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
 import java.util.Date;
 
-public class Pojazdy {
+public class Pojazd {
 	String nazwa;
 	Date rokProdukcji;
 
