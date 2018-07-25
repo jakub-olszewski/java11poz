@@ -12,4 +12,11 @@ public class Samochod {
 	public void zatrzymajSie() {
 		System.out.println("Samochód zatrzymał się");
 	}
+
+	public Samochod(int zbiornikPaliwa, int liczbaDrzwi, int iloscMiejsc) {
+		super();
+		this.zbiornikPaliwa = zbiornikPaliwa;
+		this.liczbaDrzwi = liczbaDrzwi;
+		this.iloscMiejsc = iloscMiejsc;
+	}
 }
