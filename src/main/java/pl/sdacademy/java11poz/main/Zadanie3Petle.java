@@ -1,7 +1,6 @@
 package pl.sdacademy.java11poz.main;
 
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,7 +15,17 @@ public class Zadanie3Petle {
 
 	public static void main(String[] args) {
 		// TODO wyszukanie pozycji zamowienia po nazwie/kluczu
+		logger.log(Level.INFO, "Napoje: ==================================");
+		String nazwaSzukana = "Napoj";
+		wyszukajPozycjeZamowieniaPoNazwie(nazwaSzukana);
 
+		logger.log(Level.INFO, "Pizza's: ==================================");
+		String nazwaSzukana2 = "Pizza";
+		wyszukajPozycjeZamowieniaPoNazwie(nazwaSzukana2);
+
+	}
+
+	private static void wyszukajPozycjeZamowieniaPoNazwie(String nazwaSzukana) {
 		// przeszukanie mapy w poszukiwaniu nazwy pozycji
 
 		MapaPozycjiZamowienia mapaPozycji = new MapaPozycjiZamowienia();
@@ -27,15 +36,6 @@ public class Zadanie3Petle {
 		// kolekcja jakiś zbiór
 		// wybrano metode value poniewaz tylko ona zwraca Collection
 		Collection<PozycjaZamowienia> pozycjeZamowienia = mapa.values();
-
-		// iterator ma metody:
-		// hasNext() - czy istnieje nastepnik
-		// next() - pobiera 'wagonik', i przeskakuje do następnego
-		for (Iterator iterator = pozycjeZamowienia.iterator(); iterator.hasNext();) {
-			PozycjaZamowienia pozycjaZamowienia = (PozycjaZamowienia) iterator.next();
-		}
-
-		String nazwaSzukana = "Mar";
 
 		// : oznacza (in) czyli w/z
 		for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {

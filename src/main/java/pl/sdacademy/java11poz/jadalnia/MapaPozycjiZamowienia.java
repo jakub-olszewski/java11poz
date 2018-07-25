@@ -24,9 +24,11 @@ public class MapaPozycjiZamowienia {
 		this.pozycjeMapa = new HashMap<String, PozycjaZamowienia>();
 		// zmiennaMapa.put(klucz, wartość);
 		// put wstaw wartość
+		pozycjeMapa.put("napoj2", new PozycjaZamowienia("Napoj Piwo Tyskie", 10.50f));
 		pozycjeMapa.put("pizza1", new PozycjaZamowienia("Pizza Margarita", 15.50f));
-		pozycjeMapa.put("pizza2", new PozycjaZamowienia("Pizza Poznańska", 17.50f));
 		pozycjeMapa.put("pizza3", new PozycjaZamowienia("Pizza Krakowska", 20.50f));
+		pozycjeMapa.put("napoj1", new PozycjaZamowienia("Napoj Pepsi Cola", 2.50f));
+		pozycjeMapa.put("pizza2", new PozycjaZamowienia("Pizza Poznańska", 17.50f));
 
 	}
 
