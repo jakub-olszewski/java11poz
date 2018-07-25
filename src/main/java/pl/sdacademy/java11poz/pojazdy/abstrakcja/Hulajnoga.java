@@ -1,7 +1,10 @@
 package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
-public class Hulajnoga {
+import java.util.Date;
 
+public class Hulajnoga {
+	String nazwa;
+	Date rokProdukcji;
 	float dlugosc;
 	float wysokosc;
 

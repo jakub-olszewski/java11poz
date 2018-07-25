@@ -1,6 +1,10 @@
 package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
+import java.util.Date;
+
 public class Samochod {
+	String nazwa;
+	Date rokProdukcji;
 	int zbiornikPaliwa;
 	int liczbaDrzwi;
 	int iloscMiejsc;
