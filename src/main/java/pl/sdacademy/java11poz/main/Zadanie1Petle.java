@@ -18,10 +18,14 @@ public class Zadanie1Petle {
 
 	public static void main(String[] args) {
 
-		String[] imiona = { "Julia", "Jarek", "Mateusz" };// TODO dopisz imiona
+		String[] imiona = { "Anton", "Antonina", "Julia", "Jarek", "Mateusz", "Tomasz",
+				"Irena", "Emil", "Robert", "Milena" };// TODO dopisz imiona
 
 		for (String imie : imiona) {
-			logger.log(Level.INFO, "Przetwarzm element: " + imie);
+			if (czyImieZawieraLitereA(imie)) {
+				logger.log(Level.INFO, "Przetwarzam element: " + imie);
+			}
+
 		}
 
 		for (int i = 0; i < imiona.length; i++) {
@@ -41,5 +45,14 @@ public class Zadanie1Petle {
 		/**
 		 * wypisz imiona zawierajace litere 'a'a
 		 */
+	}
+
+	/**
+	 * Metoda sprawdza czy imie zawiera litere "a"(litera "a" zostala wybrana losowo)
+	 * @param imie
+	 * @return
+	 */
+	private static boolean czyImieZawieraLitereA(String imie) {
+		return imie.contains("a") || imie.contains("A");
 	}
 }
