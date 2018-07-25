@@ -40,4 +40,12 @@ public class MapaPozycjiZamowienia {
 		return pozycjeMapa.get(kluczPozycji);
 	}
 
+	public Map<String, PozycjaZamowienia> getPozycjeMapa() {
+		return pozycjeMapa;
+	}
+
+	public void setPozycjeMapa(Map<String, PozycjaZamowienia> pozycjeMapa) {
+		this.pozycjeMapa = pozycjeMapa;
+	}
+
 }
