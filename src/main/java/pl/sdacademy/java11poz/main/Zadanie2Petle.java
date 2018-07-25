@@ -35,12 +35,16 @@ public class Zadanie2Petle {
 			PozycjaZamowienia pozycjaZamowienia = (PozycjaZamowienia) iterator.next();
 		}
 
-		String nazwa = "Poznańska";
+		String nazwaSzukana = "Mar";
 
 		// : oznacza (in) czyli w/z
 		for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {
 			// pobranie nazwy i zwrocenie zamowienia zawiarajacego nazwe
-			logger.log(Level.INFO, pozycjaZamowienia.getNazwa());
+			String nazwaPozycjiZamowienia = pozycjaZamowienia.getNazwa();
+			if (nazwaPozycjiZamowienia.contains(nazwaSzukana)) {
+				logger.log(Level.INFO, pozycjaZamowienia.toString());
+			}
+
 		}
 	}
 
