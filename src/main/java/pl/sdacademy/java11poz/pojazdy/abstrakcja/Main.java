@@ -23,6 +23,7 @@ public class Main {
 
 		for (Pojazd pojazd : pojazdy) {
 			pojazd.wypiszNazwe();
+			pojazd.poruszajSie();
 		}
 
 		// juliaDeskorolka.poruszajSie();

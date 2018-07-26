@@ -16,16 +16,12 @@ public class Deskorolka extends Pojazd {
 	// System.out.println("Pojazd:" + nazwa);
 	// }
 
-	public void poruszajSie() {
-		System.out.println("Jedzie deskorolka");
-	}
-
 	public void zatrzymajSie() {
 		System.out.println("Zatrzymuje się deskorolka");
 	}
 
 	public Deskorolka(int liczbaKol, String rodzajKol) {
-		super();
+		this.nazwa = "Deskorolka";
 		this.liczbaKol = liczbaKol;
 		this.rodzajKol = rodzajKol;
 	}
@@ -40,6 +36,11 @@ public class Deskorolka extends Pojazd {
 
 	public void setNazwa(String nazwa) {
 		this.nazwa = nazwa;
+	}
+
+	@Override
+	public void poruszajSie() {
+		System.out.println("Jedzie deskorolka");
 	}
 
 }
