@@ -1,17 +1,15 @@
 package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
-import java.util.Date;
-
-public class Samochod {
+public class Samochod extends Pojazd {
 	int zbiornikPaliwa;
 	int liczbaDrzwi;
 	int iloscMiejsc;
-	String nazwa;
-	Date rokProdukcji;
+	// String nazwa;
+	// Date rokProdukcji;
 
-	public void wypiszNazwe() {
-		System.out.println("Pojazd:" + nazwa);
-	}
+	// public void wypiszNazwe() {
+	// System.out.println("Pojazd:" + nazwa);
+	// }
 
 	public void poruszajSie() {
 		System.out.println("Samochód porusza się");

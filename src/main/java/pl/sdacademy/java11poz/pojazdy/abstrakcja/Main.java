@@ -31,13 +31,14 @@ public class Main {
 		int liczbaInt = 5;
 
 		double liczbaDouble = (double) liczbaInt;
+		// rzutowanie
 		Deskorolka deskorolka = (Deskorolka) juliaDeskorolka;
-
+		// po przypisaniu Pojazd<Deskorolka możemy wykonywać metody z Deskorolka
 		deskorolka.poruszajSie();// wymuszenie
 		deskorolka.zatrzymajSie();
 
-		juliaHulajnoga.poruszajSie();
-		juliaSamochod.poruszajSie();
+		// juliaHulajnoga.poruszajSie();
+		// juliaSamochod.poruszajSie();
 
 	}
 }

@@ -1,16 +1,14 @@
 package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
-import java.util.Date;
-
-public class Hulajnoga {
-	String nazwa;
-	Date rokProdukcji;
+public class Hulajnoga extends Pojazd {
+	// String nazwa;
+	// Date rokProdukcji;
 	float dlugosc;
 	float wysokosc;
 
-	public void wypiszNazwe() {
-		System.out.println("Pojazd:" + nazwa);
-	}
+	// public void wypiszNazwe() {
+	// System.out.println("Pojazd:" + nazwa);
+	// }
 
 	public Hulajnoga(float dlugosc, float wysokosc) {
 		super();
