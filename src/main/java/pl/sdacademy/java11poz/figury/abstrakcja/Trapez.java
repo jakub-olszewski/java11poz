@@ -1,6 +1,6 @@
 package pl.sdacademy.java11poz.figury.abstrakcja;
 
-public class Trapez {
+public class Trapez extends Figura {
 	float podstawa1;
 	float podstawa2;
 	float wysokosc;
@@ -11,7 +11,7 @@ public class Trapez {
 		this.wysokosc = wysokosc;
 	}
 
-	float obliczPole() {
-		return ((podstawa1 + podstawa2) * wysokosc) / 2;
+	public void obliczPole() {
+		this.pole = ((podstawa1 + podstawa2) * wysokosc) / 2;
 	}
 }

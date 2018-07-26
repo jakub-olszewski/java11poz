@@ -5,7 +5,7 @@ package pl.sdacademy.java11poz.figury.abstrakcja;
  * @author trener
  *
  */
-public class Kwadrat {
+public class Kwadrat extends Figura {
 	// pola
 	float bok;
 	float przekątna;
@@ -13,8 +13,8 @@ public class Kwadrat {
 	/*
 	 * metoda obliczajaca pole
 	 */
-	float obliczPole() {
-		return bok * bok;
+	public void obliczPole() {
+		this.pole = bok * bok;
 	}
 
 	/*

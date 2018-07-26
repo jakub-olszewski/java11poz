@@ -1,11 +1,11 @@
 package pl.sdacademy.java11poz.figury.abstrakcja;
 
-public class Prostokąt {
+public class Prostokąt extends Figura {
 	float podstawa;
 	float wysokosc;
 
-	float obliczPole() {
-		return podstawa * wysokosc;
+	public void obliczPole() {
+		this.pole = podstawa * wysokosc;
 
 	}
 
