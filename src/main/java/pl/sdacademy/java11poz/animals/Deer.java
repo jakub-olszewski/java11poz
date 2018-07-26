@@ -1,14 +1,14 @@
 package pl.sdacademy.java11poz.animals;
 
+/**
+ * Deer -> Mammal -> Animal
+ * @author trener
+ *
+ */
 public class Deer extends Mammal implements Vegetarian {
 
-	@Override
-	public void jescWarzywa() {
-		System.out.println("Deer je warzywa...");
-	}
-
-	void jescTrawa() {
-		System.out.println("Deer je trawe...");
+	public Deer() {
+		super("Deer");
 	}
 
 }
