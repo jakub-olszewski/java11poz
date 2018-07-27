@@ -45,6 +45,8 @@ public class JadalniaUtil {
 		System.out.println("2. Pizza Poznanska");
 		System.out.println("3. Pizza Krakowska");
 		System.out.println("===============================");
+		System.out.println("Wybór:");
+
 	}
 
 }

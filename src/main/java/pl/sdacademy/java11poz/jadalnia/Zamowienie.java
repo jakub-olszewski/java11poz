@@ -71,4 +71,9 @@ public class Zamowienie {
 		pozycje.add(pozycja);
 
 	}
+
+	public Set getPozycje() {
+		return pozycje;
+	}
+
 }

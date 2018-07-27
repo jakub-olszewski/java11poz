@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import pl.sdacademy.java11poz.jadalnia.MapaPozycjiZamowienia;
+import pl.sdacademy.java11poz.jadalnia.PozycjaZamowienia;
 import pl.sdacademy.java11poz.jadalnia.User;
 import pl.sdacademy.java11poz.jadalnia.Zamowienie;
 
@@ -22,20 +24,39 @@ public class ProgramJadalnia {
 
 		int numerZamowienia = util.generujNumerZamowienia();
 		Zamowienie zamowienie = new Zamowienie(numerZamowienia);
-		int pozycja;
+		String pozycja;
 		boolean warunekZakonczenia = true;
 		while (warunekZakonczenia) {
 			// start pętli
 			// przedstawiamy menu
 			util.wypiszMenu();
-			pozycja = Integer.parseInt(skaner.nextLine());
-			logger.log(Level.SEVERE, "Wybrana pozycja: " + pozycja);
 			// uzytkownik wybiera pozycje
-			// dodajemy wybraną pozycje do zamowienia
+			// pozycja = Integer.parseInt(skaner.nextLine());
+			pozycja = skaner.nextLine();
 			// warunek zakonczenia - słowo "dziekuje"
+			if (pozycja.equals("Dziękuje")) {
+				warunekZakonczenia = false;
+				break;
+			}
+			logger.log(Level.SEVERE, "Wybrana pozycja: " + pozycja);
+
+			// tworzymy mape pozycji
+			MapaPozycjiZamowienia pozycje = new MapaPozycjiZamowienia();
+			// pobieramy wybrana pozycje z mapy
+			PozycjaZamowienia pozycjaZamowienia = pozycje.getPozycjeMapa().get(pozycja);
+			logger.log(Level.SEVERE, "Wybrana pozycja z mapy: " + pozycjaZamowienia);
+
+			// dodajemy wybraną pozycje do zamowienia
+			zamowienie.dodajPozycje(pozycjaZamowienia);
+
 		}
 		// koniec pętli
 		// wypisanie rachunku
+
+		float suma = 0;
+		// uzywajac for'a sumujemy ceny pozycji i przypisujemy do zmiennej suma
+		zamowienie.getPozycje();
+		System.out.println("Do zapłaty:" + suma);
 		skaner.close();
 
 	}
