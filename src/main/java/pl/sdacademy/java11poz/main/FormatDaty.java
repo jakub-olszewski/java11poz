@@ -3,8 +3,10 @@
  */
 package pl.sdacademy.java11poz.main;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -30,8 +32,21 @@ public class FormatDaty {
 		wypiszDateWFormacie("23.07.2018 16:05:00", "dd.MM.yyyy HH:mm:ss");
 
 		// błędny format
-		wypiszDateWFormacie("kurs", "dd.MM.ss");
+		// wypiszDateWFormacie("kurs", "dd.MM.ss");
 
+		String format = "MM/dd/yyyy HH:mm:ss";
+		Date data = new Date();
+		wypiszStringZDatyWFormacie(data, format);
+	}
+
+	private static void wypiszStringZDatyWFormacie(Date data, String format) {
+		DateFormat df = new SimpleDateFormat(format);
+
+		Date today = Calendar.getInstance().getTime();
+
+		String reportDate = df.format(today);
+
+		System.out.println("Data: " + reportDate);
 	}
 
 	/**
