@@ -35,7 +35,7 @@ public class FormatDaty {
 		// wypiszDateWFormacie("kurs", "dd.MM.ss");
 
 		String format = "MM/dd/yyyy HH:mm:ss";
-		Date data = new Date();
+		Date data = new Date();// nowa data to obecna data
 		wypiszStringZDatyWFormacie(data, format);
 	}
 

@@ -16,11 +16,11 @@ public class JadalniaUtil {
 	}
 
 	public User nowyUzytkownik() {
-		logger.log(Level.INFO, "Wprowadź imie:");
+		System.out.println("Wprowadź imie:");
 		// pobieranie wprowadzonego nazwiska
 		String imie = skaner.nextLine();
 
-		logger.log(Level.INFO, "Wprowadź nazwisko:");
+		System.out.println("Wprowadź nazwisko:");
 		// pobieranie wprowadzonego nazwiska
 		String nazwisko = skaner.nextLine();
 		// TODO pobrac dane od uzytkownika i
@@ -28,6 +28,23 @@ public class JadalniaUtil {
 		User uzytkownik = new UserImpl(imie, nazwisko);
 		logger.log(Level.SEVERE, uzytkownik.toString());
 		return uzytkownik;
+	}
+
+	public int generujNumerZamowienia() {
+		// TODO
+		return 0;
+	}
+
+	public void wypiszMenu() {
+		// wypisanie menu przy uzyciu loggera
+		System.out.println("===============================");
+		System.out.println("Witamy w jadalni :) ");
+		System.out.println("---------------------");
+		System.out.println("Menu:");
+		System.out.println("1. Pizza Margarita");
+		System.out.println("2. Pizza Poznanska");
+		System.out.println("3. Pizza Krakowska");
+		System.out.println("===============================");
 	}
 
 }

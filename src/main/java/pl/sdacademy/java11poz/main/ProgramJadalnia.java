@@ -1,6 +1,7 @@
 package pl.sdacademy.java11poz.main;
 
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import pl.sdacademy.java11poz.jadalnia.User;
@@ -14,17 +15,26 @@ public class ProgramJadalnia {
 
 		Scanner skaner = new Scanner(System.in);
 		JadalniaUtil util = new JadalniaUtil(skaner);
-
+		// tworzymy zamowienie dla nowego uzytkownika
 		User uzytkownik = util.nowyUzytkownik();
 
-		Zamowienie zamowienie = new Zamowienie(numerZamowienia, suma);
-		// tworzymy zamowienie dla nowego uzytkownika
-		// start pętli
-		// przedstawiamy menu
-		// uzytkownik wybiera pozycje
-		// dodajemy wybraną pozycje do zamowienia
+		// numer zamowienia to data bez separatorow
+
+		int numerZamowienia = util.generujNumerZamowienia();
+		Zamowienie zamowienie = new Zamowienie(numerZamowienia);
+		int pozycja;
+		boolean warunekZakonczenia = true;
+		while (warunekZakonczenia) {
+			// start pętli
+			// przedstawiamy menu
+			util.wypiszMenu();
+			pozycja = Integer.parseInt(skaner.nextLine());
+			logger.log(Level.SEVERE, "Wybrana pozycja: " + pozycja);
+			// uzytkownik wybiera pozycje
+			// dodajemy wybraną pozycje do zamowienia
+			// warunek zakonczenia - słowo "dziekuje"
+		}
 		// koniec pętli
-		// warunek zakonczenia - słowo "dziekuje"
 		// wypisanie rachunku
 		skaner.close();
 
