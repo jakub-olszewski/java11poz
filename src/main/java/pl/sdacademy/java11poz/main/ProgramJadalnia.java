@@ -60,7 +60,7 @@ public class ProgramJadalnia {
 		for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {
 			float cena = pozycjaZamowienia.getCena();
 			suma += cena;
-			// suma += pozycjaZamowienia.getCena();// to samo co wyżej
+			// suma += pozycjaZamowienia.getCena();// to samo co wyżeji
 		}
 		System.out.println("Do zapłaty:" + suma);
 		skaner.close();
