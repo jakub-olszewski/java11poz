@@ -19,7 +19,7 @@ public class UserImpl implements User {
 	// tutaj konczy sie lista pol
 
 	public String toString() {
-		return pobierzImieINazwisko();
+		return "Dane uzytkownika: " + pobierzImieINazwisko();
 
 	}
 
