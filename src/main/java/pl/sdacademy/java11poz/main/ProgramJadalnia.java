@@ -1,6 +1,7 @@
 package pl.sdacademy.java11poz.main;
 
 import java.util.Scanner;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -55,9 +56,11 @@ public class ProgramJadalnia {
 
 		float suma = 0;
 		// uzywajac for'a sumujemy ceny pozycji i przypisujemy do zmiennej suma
-		zamowienie.getPozycje();
+		Set<PozycjaZamowienia> pozycjeZamowienia = zamowienie.getPozycje();
+		for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {
+			pozycjaZamowienia.getCena();
+		}
 		System.out.println("Do zapłaty:" + suma);
 		skaner.close();
-
 	}
 }
