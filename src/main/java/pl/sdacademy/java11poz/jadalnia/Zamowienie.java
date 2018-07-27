@@ -25,6 +25,19 @@ public class Zamowienie {
 		this.pozycje = new HashSet();
 	}
 
+	/**
+	 * Konstruktor jedno argumentowy
+	 * 
+	 * @param numerZamowienia to numer zamowienia
+	 */
+	public Zamowienie(int numerZamowienia) {
+		this.numerZamowienia = numerZamowienia;
+		this.suma = 0;
+		// inicjalizacja interfejsu Set
+		// HashSet to implementacja Set'a
+		this.pozycje = new HashSet();
+	}
+
 	// pole numer zamowienia
 	int numerZamowienia;
 
