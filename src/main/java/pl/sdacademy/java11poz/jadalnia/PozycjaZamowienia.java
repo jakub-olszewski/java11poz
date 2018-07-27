@@ -12,6 +12,9 @@ public class PozycjaZamowienia {
 		this.cena = cena;
 	}
 
+	/*
+	 * Metoda zwraca cene zamówienia
+	 */
 	public float getCena() {
 		return cena;
 	}

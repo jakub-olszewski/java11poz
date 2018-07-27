@@ -58,7 +58,9 @@ public class ProgramJadalnia {
 		// uzywajac for'a sumujemy ceny pozycji i przypisujemy do zmiennej suma
 		Set<PozycjaZamowienia> pozycjeZamowienia = zamowienie.getPozycje();
 		for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {
-			pozycjaZamowienia.getCena();
+			float cena = pozycjaZamowienia.getCena();
+			suma += cena;
+			// suma += pozycjaZamowienia.getCena();// to samo co wyżej
 		}
 		System.out.println("Do zapłaty:" + suma);
 		skaner.close();
