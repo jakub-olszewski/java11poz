@@ -13,6 +13,7 @@ import pl.sdacademy.java11poz.jadalnia.User;
 import pl.sdacademy.java11poz.jadalnia.UserImpl;
 import pl.sdacademy.java11poz.jadalnia.Zamowienie;
 import pl.sdacademy.java11poz.jadalnia.enums.Miasto;
+import pl.sdacademy.java11poz.pojazdy.Rower;
 
 /**
  * @author trener
@@ -158,6 +159,9 @@ public class InstrukcjeKlasy {
 			System.out.println("Szefowa ;)");
 		}
 
+		String nazwa = "Moj rower";
+		String kolorRoweru = "Niebieski rower";
+		Rower rowerSzymona = new Rower(nazwa, kolorRoweru);
 	}
 
 }
