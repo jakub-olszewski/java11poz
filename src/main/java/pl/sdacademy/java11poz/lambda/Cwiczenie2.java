@@ -44,11 +44,11 @@ public class Cwiczenie2 {
 				return pojazd1.getNazwa().compareTo(pojazd2.getNazwa());
 			}
 		});
+
+		// sortowanie po nazwie z użyciem lambdy
 		Comparator<Pojazd> sortPojazdyByName = (Pojazd pojazd1, Pojazd pojazd2) -> {
 			return pojazd1.getNazwa().compareTo(pojazd2.getNazwa());
 		};
-
-		// sortowanie po nazwie z użyciem lambdy
 		Collections.sort(pojazdy, sortPojazdyByName);
 
 	}
