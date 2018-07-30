@@ -11,7 +11,8 @@ public class Hulajnoga extends Pojazd {
 	// }
 
 	public Hulajnoga(float dlugosc, float wysokosc) {
-		super();
+		this.nazwa = "Hulajnoga";
+
 		this.dlugosc = dlugosc;
 		this.wysokosc = wysokosc;
 	}

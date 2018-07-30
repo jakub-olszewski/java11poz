@@ -20,7 +20,7 @@ public class Samochod extends Pojazd {
 	}
 
 	public Samochod(int zbiornikPaliwa, int liczbaDrzwi, int iloscMiejsc) {
-		super();
+		this.nazwa = "Samochod";
 		this.zbiornikPaliwa = zbiornikPaliwa;
 		this.liczbaDrzwi = liczbaDrzwi;
 		this.iloscMiejsc = iloscMiejsc;

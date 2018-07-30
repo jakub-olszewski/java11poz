@@ -38,7 +38,13 @@ public class Cwiczenie1 {
 		/**
 		 * Sortowanie z użyciem lambdy
 		 */
+		Comparator<String> sortByName = (String pozycja1, String pozycja2) -> pozycja1
+				.compareTo(pozycja2);
+		Arrays.sort(pozycje, sortByName);
 
+		List<String> pozycjePoSortowaniu = Arrays.asList(pozycje);
+
+		pozycjePoSortowaniu.forEach(pozycja -> System.out.println(pozycja));
 	}
 
 	private static void logowaniePozycji(String pozycja) {

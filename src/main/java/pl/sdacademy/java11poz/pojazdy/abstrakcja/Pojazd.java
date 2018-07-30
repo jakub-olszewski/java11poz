@@ -11,4 +11,13 @@ public abstract class Pojazd {
 	}
 
 	public abstract void poruszajSie();
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
+	public void setNazwa(String nazwa) {
+		this.nazwa = nazwa;
+	}
+
 }
