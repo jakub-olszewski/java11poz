@@ -23,5 +23,13 @@ public class PetlaForLambda {
 		figury.add(prostokatFigura);
 		figury.add(trapezFigura);
 
+		// for (Figura figura : figury) {
+		// figura.obliczPole();
+		// figura.wypiszInformacje();
+		// }
+		figury.forEach((figura) -> {
+			figura.obliczPole();
+			figura.wypiszInformacje();
+		});
 	}
 }
