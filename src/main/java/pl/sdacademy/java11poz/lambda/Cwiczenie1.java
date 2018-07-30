@@ -24,13 +24,21 @@ public class Cwiczenie1 {
 		// z uzyciem lambda
 		pozycjeLista.forEach((pozycja) -> logowaniePozycji(pozycja));
 
+		/**
+		 * Sortowanie pozycji bez użycia lambdy
+		 */
 		Arrays.sort(pozycje, new Comparator<String>() {
 
 			@Override
-			public int compare(String o1, String o2) {
-				return 0;
+			public int compare(String pozycja1, String pozycja2) {
+				return pozycja1.compareTo(pozycja2);
 			}
 		});
+
+		/**
+		 * Sortowanie z użyciem lambdy
+		 */
+
 	}
 
 	private static void logowaniePozycji(String pozycja) {
