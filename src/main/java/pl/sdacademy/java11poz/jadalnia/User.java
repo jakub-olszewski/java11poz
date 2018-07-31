@@ -42,4 +42,6 @@ public interface User {
 
 	public void wypiszStatus();
 
+	public void setNumerTelefonu(String numerTelefonu);
+
 }

@@ -9,6 +9,8 @@ public class UserImpl implements User {
 	// ponizej znajduje sie lista pol
 	String imie;
 	String nazwisko;
+	String numerTelefonu;
+
 	int wiek;
 	Miasto miasto; // "Miasto" to typ danych wyliczeniowy a "miasto" to nazwa zmiennej
 	Date dataLogowania;
@@ -136,5 +138,13 @@ public class UserImpl implements User {
 
 	public void setStatus(Status status) {
 		this.status = status;
+	}
+
+	public String getNumerTelefonu() {
+		return numerTelefonu;
+	}
+
+	public void setNumerTelefonu(String numerTelefonu) {
+		this.numerTelefonu = numerTelefonu;
 	}
 }

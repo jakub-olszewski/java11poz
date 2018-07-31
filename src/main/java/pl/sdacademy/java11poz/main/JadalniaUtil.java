@@ -25,7 +25,10 @@ public class JadalniaUtil {
 		String nazwisko = skaner.nextLine();
 		// TODO pobrac dane od uzytkownika i
 		// dopowiednio uzupelnic zmienne
+
 		User uzytkownik = new UserImpl(imie, nazwisko);
+
+		uzytkownik.setNumerTelefonu("234234");
 		logger.log(Level.SEVERE, uzytkownik.toString());
 		return uzytkownik;
 	}
