@@ -30,25 +30,48 @@ public class JadalniaUtil {
 
 		// pobieramy ze skanera
 		User uzytkownik = new UserImpl(imie, nazwisko);
-		System.out.println("Wprowadź numer telefonu:");
-		String numerTelefonu = skaner.nextLine();
 
-		// sprawdzamy czy jest zgodny z wzorcem wyrazenia regularnego
-		// w przypadku niezgodnosci zrzucamy wyjatek
-		walidacjaNumeruTelefonu(numerTelefonu);
-		// wyjatek łapiemy i wyswietlamy komunikat
-		// prosimy o ponowne wpisanie numeru telefonu (pętla)
+		boolean warunekPoprawnegoNumeruTelefonu = true;
+		while (warunekPoprawnegoNumeruTelefonu) {
+
+			System.out.println("Wprowadź numer telefonu:");
+			String numerTelefonu = skaner.nextLine();
+			// sprawdzamy czy jest zgodny z wzorcem wyrazenia regularnego
+			// w przypadku niezgodnosci zrzucamy wyjatek
+			try {
+				walidacjaNumeruTelefonu(numerTelefonu);
+				// linia poniżej wykonuje się gdy linia powyżej nie zrzuca wyjątku
+				warunekPoprawnegoNumeruTelefonu = false;
+			}
+			catch (NumerTelefonuException e) {
+				// wyjatek łapiemy i wyswietlamy komunikat
+				System.err.println(e.getMessage());
+			}
+			// prosimy o ponowne wpisanie numeru telefonu (pętla)
+		}
 
 		uzytkownik.setNumerTelefonu("234234");
 		logger.log(Level.SEVERE, uzytkownik.toString());
 		return uzytkownik;
 	}
 
-	private void walidacjaNumeruTelefonu(String numerTelefonu) {
+	/**
+	 * Metoda waliduje numer telefonu,
+	 * @param numerTelefonu
+	 * @throws NumerTelefonuException wrzuca wyjatek w przypadku blednego numeru
+	 */
+	private void walidacjaNumeruTelefonu(String numerTelefonu)
+			throws NumerTelefonuException {
 		Pattern compiledPattern = Pattern.compile("\\d{3}-\\d{3}-\\d{3}");
 		Matcher matcher = compiledPattern.matcher(numerTelefonu);
 		boolean czyNumerJestPrawidlowy = matcher.matches();
 		System.out.println("Numer jest " + czyNumerJestPrawidlowy);
+
+		// tutaj zrzucic wyjatek throw
+		// wykrzyknik negacja warunku !=>'nie'
+		if (!czyNumerJestPrawidlowy) {
+			throw new NumerTelefonuException(numerTelefonu);
+		}
 	}
 
 	public int generujNumerZamowienia() {
