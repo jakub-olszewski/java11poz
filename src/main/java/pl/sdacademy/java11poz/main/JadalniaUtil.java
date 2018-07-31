@@ -28,6 +28,11 @@ public class JadalniaUtil {
 
 		User uzytkownik = new UserImpl(imie, nazwisko);
 
+		// pobieramy ze skanera
+		// sprawdzamy czy jest zgodny z wzorcem wyrazenia regularnego
+		// w przypadku niezgodnosci zrzucamy wyjatek
+		// wyjatek łapiemy i wyswietlamy komunikat
+		// prosimy o ponowne wpisanie numeru telefonu
 		uzytkownik.setNumerTelefonu("234234");
 		logger.log(Level.SEVERE, uzytkownik.toString());
 		return uzytkownik;
