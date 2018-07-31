@@ -35,7 +35,7 @@ public class ProgramJadalnia {
 			// pozycja = Integer.parseInt(skaner.nextLine());
 			pozycja = skaner.nextLine();
 			// warunek zakonczenia - słowo "dziekuje"
-			if (pozycja.equals("Dziękuje")) {
+			if ("Dziękuje".equals(pozycja)) {
 				warunekZakonczenia = false;
 				break;
 			}
@@ -62,6 +62,7 @@ public class ProgramJadalnia {
 			suma += cena;
 			// suma += pozycjaZamowienia.getCena();// to samo co wyżeji
 		}
+
 		System.out.println("Do zapłaty:" + suma);
 		skaner.close();
 	}
