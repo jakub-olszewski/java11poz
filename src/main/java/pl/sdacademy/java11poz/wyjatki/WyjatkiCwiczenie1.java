@@ -9,14 +9,21 @@ public class WyjatkiCwiczenie1 {
 	public static void main(String[] args) {
 
 		Date data = pobierzDate(1, 6, 2018);
-		System.out.println("Data: " + data);
-		// try {
-		// // FormatDaty.wypiszDateWFormacie("", "dd/mm/yyyy");
-		// }
-		// catch (ParseException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
+		System.out.println("Data1: " + data);
+
+		Date data2 = null;
+		try {
+			data = pobierzDate(-100, 6, 2018);
+		}
+		catch (Exception e) {
+			System.out.println("Wyjątek :(");
+		}
+
+		System.out.println("Data2: " + data2);
+
+		data = pobierzDate(100, -1, 20180);
+		System.out.println("Data3: " + data);
+
 		System.out.println("Nic sie nie stało wyjątek obsłużony :)");
 	}
 
