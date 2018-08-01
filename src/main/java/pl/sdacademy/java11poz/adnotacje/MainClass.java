@@ -9,7 +9,6 @@ public class MainClass {
 	 */
 	public MainClass() {
 		Class obj = this.getClass();
-
 		if (obj.isAnnotationPresent(JavaTopic.class)) {
 
 			Annotation annotacja = obj.getAnnotation(JavaTopic.class);
@@ -20,7 +19,13 @@ public class MainClass {
 			System.out.printf("Description: " + javaTopic.decription());
 			System.out.printf("Priority: " + javaTopic.priority());
 			System.out.printf("CreatedBy: " + javaTopic.createdBy());
-			System.out.printf("Tags: " + javaTopic.createdBy());
+			System.out.printf("Tags: ");
+
+			for (String tag : javaTopic.tags()) {
+				System.out.printf(tag);
+			}
+			System.out.printf(
+					"\n===========================================================================");
 
 		}
 	}
