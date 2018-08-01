@@ -1,6 +1,8 @@
 package pl.sdacademy.java11poz.adnotacje;
 
 import java.lang.annotation.Annotation;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainClass {
 
@@ -24,8 +26,11 @@ public class MainClass {
 			for (String tag : javaTopic.tags()) {
 				System.out.printf(tag);
 			}
-			// wypisz tagi za pomocą stream()
+			// zamien tablice na liste
+			List<String> tagsList = Arrays.asList(javaTopic.tags());
 
+			// wypisz tagi za pomocą stream()
+			// tagsList.stream().
 			// wypisz tagi w czytelny sposób używając separatora
 
 			System.out.printf(

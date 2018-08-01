@@ -11,8 +11,12 @@ import pl.sdacademy.java11poz.adnotacje.MainClass;
  * @author trener
  *
  */
-@JavaTopic(decription = "Figury, dziedziczenie, petle", topic = "Abstrakcja figury geometryczne", tags = {
-		"a", "b" })
+// @formatter:off
+@JavaTopic(
+		topic = "Abstrakcja figury geometryczne", 
+		decription = "Figury, dziedziczenie, petle", 
+		tags = {"Abstrakcja", "Dziedziczenie" , "Pętle"}) 
+// @formatter:on
 public class Main extends MainClass {
 
 	public Main() {
