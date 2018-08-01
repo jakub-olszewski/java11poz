@@ -44,6 +44,8 @@ public class Main extends MainClass {
 			sumaPol += figura.pobierzPole();
 		}
 
+		// zamień for na stream();
+
 		// wypisanie sumy pól
 		System.out.println("Suma pol : " + sumaPol);
 	}

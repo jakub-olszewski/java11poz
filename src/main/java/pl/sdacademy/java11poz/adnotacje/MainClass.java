@@ -23,14 +23,11 @@ public class MainClass {
 			System.out.printf("%nCreatedBy: %s", javaTopic.createdBy());
 			System.out.printf("%nTags: ");
 
-			for (String tag : javaTopic.tags()) {
-				System.out.printf(tag);
-			}
 			// zamien tablice na liste
 			List<String> tagsList = Arrays.asList(javaTopic.tags());
 
 			// wypisz tagi za pomocą stream()
-			// tagsList.stream().
+			tagsList.stream().forEach(tag -> System.out.print(tag + ","));
 			// wypisz tagi w czytelny sposób używając separatora
 
 			System.out.printf(
