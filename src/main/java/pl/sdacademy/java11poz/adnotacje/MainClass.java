@@ -4,7 +4,9 @@ import java.lang.annotation.Annotation;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainClass {
+public abstract class MainClass {
+
+	protected abstract void implementacjaProgramu();
 
 	/**
 	 * Konstruktor MainClass
@@ -17,6 +19,8 @@ public class MainClass {
 			JavaTopic javaTopic = (JavaTopic) annotacja;
 			System.out.printf(
 					"===========================================================================");
+			// %s oznacza String
+			// %n oznacza new line
 			System.out.printf("%nTopic: %s", javaTopic.topic());
 			System.out.printf("%nDescription: %s", javaTopic.decription());
 			System.out.printf("%nPriority: %s", javaTopic.priority());

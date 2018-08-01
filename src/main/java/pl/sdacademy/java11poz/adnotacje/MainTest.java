@@ -11,4 +11,10 @@ public class MainTest extends MainClass {
 		MainTest test = new MainTest();
 		System.out.println(test);
 	}
+
+	@Override
+	protected void implementacjaProgramu() {
+		// TODO Auto-generated method stub
+
+	}
 }

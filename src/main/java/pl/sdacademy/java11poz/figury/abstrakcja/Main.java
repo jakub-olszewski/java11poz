@@ -36,17 +36,30 @@ public class Main extends MainClass {
 		figury.add(prostokatFigura);
 		figury.add(trapezFigura);
 
-		float sumaPol = 0;
-		// suma pol figur liczona w petli for
-		for (Figura figura : figury) {
-			figura.obliczPole();
-			figura.wypiszInformacje();
-			sumaPol += figura.pobierzPole();
-		}
+		// float sumaPol = 0;
+		// // suma pol figur liczona w petli for
+		// for (Figura figura : figury) {
+		// figura.obliczPole();
+		// figura.wypiszInformacje();
+		// sumaPol += figura.pobierzPole();
+		// }
 
 		// zamień for na stream();
+		figury.stream().forEach(figura -> {
+			figura.obliczPole();
+			figura.wypiszInformacje();
+		});
+
+		float sumaPol = (float) figury.stream()
+				.mapToDouble(figura -> figura.pobierzPole()).sum();
 
 		// wypisanie sumy pól
 		System.out.println("Suma pol : " + sumaPol);
+	}
+
+	@Override
+	protected void implementacjaProgramu() {
+		// TODO Auto-generated method stub
+
 	}
 }

@@ -27,9 +27,11 @@ public class Main {
 		zwierzaki.add(pigeon);
 		zwierzaki.add(jelen);
 
-		for (Animal animal : zwierzaki) {
-			animal.wypiszInformacje();
-		}
+		// for (Animal animal : zwierzaki) {
+		// animal.wypiszInformacje();
+		// }
+		// petla powyzej zastapiona stream ponizej
+		zwierzaki.stream().forEach(animal -> animal.wypiszInformacje());
 
 	}
 }
