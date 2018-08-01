@@ -25,6 +25,9 @@ public class MainClass {
 				System.out.printf(tag);
 			}
 			// wypisz tagi za pomocą stream()
+
+			// wypisz tagi w czytelny sposób używając separatora
+
 			System.out.printf(
 					"\n===========================================================================%n%n");
 
