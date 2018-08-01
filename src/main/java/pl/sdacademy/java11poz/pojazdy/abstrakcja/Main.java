@@ -12,9 +12,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Pojazd juliaDeskorolka = new Deskorolka(4, "Kauczuk");
 		Pojazd juliaHulajnoga = new Hulajnoga(200, 150);
 		Pojazd juliaSamochod = new Samochod(40, 3, 2);
+
+		Pojazd juliaDeskorolka = new Deskorolka(4, "Kauczuk");
+		Deskorolka deskorolka = (Deskorolka) juliaDeskorolka;
 
 		List<Pojazd> pojazdy = new ArrayList<Pojazd>();
 		pojazdy.add(juliaDeskorolka);
@@ -33,7 +35,6 @@ public class Main {
 
 		double liczbaDouble = (double) liczbaInt;
 		// rzutowanie
-		Deskorolka deskorolka = (Deskorolka) juliaDeskorolka;
 		// po przypisaniu Pojazd<Deskorolka możemy wykonywać metody z Deskorolka
 		deskorolka.poruszajSie();// wymuszenie
 		deskorolka.zatrzymajSie();
