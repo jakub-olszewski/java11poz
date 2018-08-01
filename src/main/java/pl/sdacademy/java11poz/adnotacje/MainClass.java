@@ -14,18 +14,19 @@ public class MainClass {
 			Annotation annotacja = obj.getAnnotation(JavaTopic.class);
 			JavaTopic javaTopic = (JavaTopic) annotacja;
 			System.out.printf(
-					"\n===========================================================================");
-			System.out.printf("Topic: " + javaTopic.topic());
-			System.out.printf("Description: " + javaTopic.decription());
-			System.out.printf("Priority: " + javaTopic.priority());
-			System.out.printf("CreatedBy: " + javaTopic.createdBy());
-			System.out.printf("Tags: ");
+					"===========================================================================");
+			System.out.printf("%nTopic: %s", javaTopic.topic());
+			System.out.printf("%nDescription: %s", javaTopic.decription());
+			System.out.printf("%nPriority: %s", javaTopic.priority());
+			System.out.printf("%nCreatedBy: %s", javaTopic.createdBy());
+			System.out.printf("%nTags: ");
 
 			for (String tag : javaTopic.tags()) {
 				System.out.printf(tag);
 			}
+			// wypisz tagi za pomocą stream()
 			System.out.printf(
-					"\n===========================================================================");
+					"\n===========================================================================%n%n");
 
 		}
 	}

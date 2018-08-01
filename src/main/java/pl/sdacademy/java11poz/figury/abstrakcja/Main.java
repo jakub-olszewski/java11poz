@@ -3,15 +3,23 @@ package pl.sdacademy.java11poz.figury.abstrakcja;
 import java.util.ArrayList;
 import java.util.List;
 
+import pl.sdacademy.java11poz.adnotacje.JavaTopic;
+import pl.sdacademy.java11poz.adnotacje.MainClass;
+
 /**
  * Wersja figury z abstrakcja i dziedziczeniem
  * @author trener
  *
  */
-public class Main {
+@JavaTopic(decription = "Figury, dziedziczenie, petle", topic = "Abstrakcja figury geometryczne")
+public class Main extends MainClass {
+
+	public Main() {
+		super();
+	}
 
 	public static void main(String[] args) {
-
+		new Main();
 		// tworzenie figur
 		Figura kwadratFigura = new Kwadrat(3);
 		Figura prostokatFigura = new Prostokąt(3, 5);
