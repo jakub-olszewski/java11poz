@@ -1,14 +1,17 @@
 package pl.sdacademy.java11poz.pojazdy.abstrakcja;
 
+import pl.sdacademy.java11poz.adnotacje.JavaTopic;
+
 /**
  * Wersja bez abstrakcji i dziedziczenia
  * @author trener
  *
  */
+@JavaTopic(decription = "Wykorzystanie typów generycznych", topic = "Typy generyczne")
 public class Main {
 
 	public static void main(String[] args) {
-		ObslugaPojazdu<Pojazd> obsluga = new ObslugaPojazdu<Pojazd>();
+		ObslugaPojazdu<Pojazd> obsluga = new ObslugaPojazdu<>();
 
 		Pojazd juliaHulajnoga = new Hulajnoga(200, 150);
 		Pojazd juliaSamochod = new Samochod(40, 3, 2);
@@ -16,17 +19,23 @@ public class Main {
 		Deskorolka deskorolka = (Deskorolka) juliaDeskorolka;
 
 		// przepisz przy uzyciu obsluga i wykorzystaniu metody dodajPojazd()
-		pojazdy.add(juliaDeskorolka);
-		pojazdy.add(juliaHulajnoga);
-		pojazdy.add(juliaSamochod);
+		obsluga.dodajPojazd(deskorolka);
+		obsluga.dodajPojazd(juliaDeskorolka);
+		obsluga.dodajPojazd(juliaHulajnoga);
+		obsluga.dodajPojazd(juliaSamochod);
 
 		// wykorzystaj stream stream
-		for (Pojazd pojazd : pojazdy) {
+		// for (Pojazd pojazd : pojazdy) {
+		// obsluga.aktualizujPojazd(pojazd);
+		// obsluga.wypiszIPoruszajSie();
+		// }
+		obsluga.pojazdy.stream().forEach(pojazd -> {
 			obsluga.aktualizujPojazd(pojazd);
-			obsluga.wypiszIPoruszajSie();
-		}
+			obsluga.wypiszIPoruszajSie(pojazd);
+		});
 
 		// podaj ilość pojazdów - utworz metode w obsludze
 
 	}
+
 }

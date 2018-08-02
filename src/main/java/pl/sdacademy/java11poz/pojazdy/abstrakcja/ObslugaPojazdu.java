@@ -20,4 +20,21 @@ public class ObslugaPojazdu<T extends Pojazd> {
 		pojazdy.add(pojazd);
 	}
 
+	public void aktualizujPojazd(Pojazd pojazd) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void wypiszIPoruszajSie(Pojazd pojazd) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void aktualizujWypiszPojazdy() {
+		obsluga.pojazdy.stream().forEach(pojazd -> {
+			obsluga.aktualizujPojazd(pojazd);
+			obsluga.wypiszIPoruszajSie(pojazd);
+		});
+	}
+
 }
