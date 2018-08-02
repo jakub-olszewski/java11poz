@@ -22,19 +22,21 @@ public class ObslugaPojazdu<T extends Pojazd> {
 
 	public void aktualizujPojazd(Pojazd pojazd) {
 		// TODO Auto-generated method stub
-
 	}
 
 	public void wypiszIPoruszajSie(Pojazd pojazd) {
-		// TODO Auto-generated method stub
-
+		pojazd.wypiszNazwe();
 	}
 
 	public void aktualizujWypiszPojazdy() {
-		obsluga.pojazdy.stream().forEach(pojazd -> {
-			obsluga.aktualizujPojazd(pojazd);
-			obsluga.wypiszIPoruszajSie(pojazd);
+		pojazdy.stream().forEach(pojazd -> {
+			aktualizujPojazd(pojazd);
+			wypiszIPoruszajSie(pojazd);
 		});
+	}
+
+	public int zliczPojazdy() {
+		return 0;
 	}
 
 }

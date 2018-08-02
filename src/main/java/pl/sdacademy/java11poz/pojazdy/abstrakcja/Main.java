@@ -29,10 +29,8 @@ public class Main {
 		// obsluga.aktualizujPojazd(pojazd);
 		// obsluga.wypiszIPoruszajSie();
 		// }
-		obsluga.pojazdy.stream().forEach(pojazd -> {
-			obsluga.aktualizujPojazd(pojazd);
-			obsluga.wypiszIPoruszajSie(pojazd);
-		});
+
+		obsluga.aktualizujWypiszPojazdy();
 
 		// podaj ilość pojazdów - utworz metode w obsludze
 
