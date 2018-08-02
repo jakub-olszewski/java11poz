@@ -14,21 +14,21 @@ import java.util.Map;
  */
 public class MapaPozycjiZamowienia {
 	// deklaracja zmiennej pozycjaMap przy użyciu interfejsu Map
-	Map<String, PozycjaZamowienia> pozycjeMapa;
+	Map<Integer, PozycjaZamowienia> pozycjeMapa;
 
 	/**
 	 * konstruktor tworzący mapę pozycji
 	 */
 	public MapaPozycjiZamowienia() {
 		// inicjalizacja mapyPozycji
-		this.pozycjeMapa = new HashMap<String, PozycjaZamowienia>();
+		this.pozycjeMapa = new HashMap<Integer, PozycjaZamowienia>();
 		// zmiennaMapa.put(klucz, wartość);
 		// put wstaw wartość
-		pozycjeMapa.put("1", new PozycjaZamowienia("Pizza Margarita", 15.50f));
-		pozycjeMapa.put("2", new PozycjaZamowienia("Pizza Poznańska", 17.50f));
-		pozycjeMapa.put("3", new PozycjaZamowienia("Pizza Krakowska", 20.50f));
-		pozycjeMapa.put("4", new PozycjaZamowienia("Napoj Piwo Tyskie", 10.50f));
-		pozycjeMapa.put("5", new PozycjaZamowienia("Napoj Pepsi Cola", 2.50f));
+		pozycjeMapa.put(1, new PozycjaZamowienia("Pizza Margarita", 15.50f));
+		pozycjeMapa.put(2, new PozycjaZamowienia("Pizza Poznańska", 17.50f));
+		pozycjeMapa.put(3, new PozycjaZamowienia("Pizza Krakowska", 20.50f));
+		pozycjeMapa.put(4, new PozycjaZamowienia("Napoj Piwo Tyskie", 10.50f));
+		pozycjeMapa.put(5, new PozycjaZamowienia("Napoj Pepsi Cola", 2.50f));
 
 	}
 
@@ -42,11 +42,11 @@ public class MapaPozycjiZamowienia {
 		return pozycjeMapa.get(kluczPozycji);
 	}
 
-	public Map<String, PozycjaZamowienia> getPozycjeMapa() {
+	public Map<Integer, PozycjaZamowienia> getPozycjeMapa() {
 		return pozycjeMapa;
 	}
 
-	public void setPozycjeMapa(Map<String, PozycjaZamowienia> pozycjeMapa) {
+	public void setPozycjeMapa(Map<Integer, PozycjaZamowienia> pozycjeMapa) {
 		this.pozycjeMapa = pozycjeMapa;
 	}
 

@@ -17,77 +17,84 @@ public class ProgramJadalnia {
 
 	public static void main(String[] args) {
 
-		Scanner skaner = new Scanner(System.in);
-		JadalniaUtil util = new JadalniaUtil(skaner);
-		// tworzymy zamowienie dla nowego uzytkownika
-		User uzytkownik = util.nowyUzytkownik();
+		Scanner skaner;
+		while (true) {
+			skaner = new Scanner(System.in);
+			JadalniaUtil util = new JadalniaUtil(skaner);
 
-		// numer zamowienia to data bez separatorow
+			// tworzymy zamowienie dla nowego uzytkownika
+			User uzytkownik = util.nowyUzytkownik();
 
-		int numerZamowienia = util.generujNumerZamowienia();
-		Zamowienie zamowienie = new Zamowienie(numerZamowienia);
-		int pozycja = 0;
-		boolean warunekZakonczenia = true;
-		while (warunekZakonczenia) {
-			// start pętli
-			// przedstawiamy menu
-			util.wypiszMenu();
-			// uzytkownik wybiera pozycje od 0 do 5
-			// TODO 1 obsłużenie wyjątku podczas wpisania nie prawidłowej pozycji np
-			// litery
-			boolean warunekZakonczeniaPobieraniaPozycji = true;
+			// numer zamowienia to data bez separatorow
 
-			while (warunekZakonczeniaPobieraniaPozycji) {
+			int numerZamowienia = util.generujNumerZamowienia();
+			Zamowienie zamowienie = new Zamowienie(numerZamowienia);
+			int pozycja = 0;
+			boolean warunekZakonczenia = true;
+			while (warunekZakonczenia) {
+				// start pętli
+				// przedstawiamy menu
+				util.wypiszMenu();
+				// uzytkownik wybiera pozycje od 0 do 5
+				// TODO 1 obsłużenie wyjątku podczas wpisania nie prawidłowej pozycji np
+				// litery
+				boolean warunekZakonczeniaPobieraniaPozycji = true;
 
-				try {
-					pozycja = skaner.nextInt();
+				while (warunekZakonczeniaPobieraniaPozycji) {
 
-					// TODO 2 walidacja liczba z zakresu od 0 do 5
-					// uzycie operatorów matematycznych
-					// instrukcja warunkowa
-					boolean czyPozycjaIstniejeWZakresie = pozycja < 5 && pozycja >= 0;
-					if (czyPozycjaIstniejeWZakresie) {
-						warunekZakonczeniaPobieraniaPozycji = false;
+					try {
+						pozycja = skaner.nextInt();
+
+						// TODO 2 walidacja liczba z zakresu od 0 do 5
+						// uzycie operatorów matematycznych
+						// instrukcja warunkowa
+						boolean czyPozycjaIstniejeWZakresie = pozycja < 5 && pozycja >= 0;
+						if (czyPozycjaIstniejeWZakresie) {
+							warunekZakonczeniaPobieraniaPozycji = false;
+						}
 					}
+					catch (InputMismatchException e) {
+						System.out.println("Wyjątek obsłużony");
+						skaner = new Scanner(System.in);
+					}
+					System.out.println("Dalsze działanie programu...");
 				}
-				catch (InputMismatchException e) {
-					System.out.println("Wyjątek obsłużony");
-					skaner = new Scanner(System.in);
+
+				// TODO 3 warunek zakonczenia - to wpisanie zera
+				if (pozycja == 0) {// == porównanie , = równość
+					warunekZakonczenia = false;
+					break;
 				}
-				System.out.println("Dalsze działanie programu...");
+
+				logger.log(Level.SEVERE, "Wybrana pozycja: " + pozycja);
+
+				// tworzymy mape pozycji
+				MapaPozycjiZamowienia pozycje = new MapaPozycjiZamowienia();
+				// pobieramy wybrana pozycje z mapy
+				PozycjaZamowienia pozycjaZamowienia = pozycje.getPozycjeMapa()
+						.get(pozycja);
+				logger.log(Level.SEVERE, "Wybrana pozycja z mapy: " + pozycjaZamowienia);
+
+				// dodajemy wybraną pozycje do zamowienia
+				zamowienie.dodajPozycje(pozycjaZamowienia);
+
+			}
+			// koniec pętli
+			// wypisanie rachunku
+
+			float suma = 0;
+			// uzywajac for'a sumujemy ceny pozycji i przypisujemy do zmiennej suma
+			Set<PozycjaZamowienia> pozycjeZamowienia = zamowienie.getPozycje();
+			for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {
+				float cena = pozycjaZamowienia.getCena();
+				suma += cena;
+				// suma += pozycjaZamowienia.getCena();// to samo co wyżeji
 			}
 
-			// TODO 3 warunek zakonczenia - to wpisanie zera
-			if (pozycja == 0) {// == porównanie , = równość
-				warunekZakonczenia = false;
-				break;
-			}
-
-			logger.log(Level.SEVERE, "Wybrana pozycja: " + pozycja);
-
-			// tworzymy mape pozycji
-			MapaPozycjiZamowienia pozycje = new MapaPozycjiZamowienia();
-			// pobieramy wybrana pozycje z mapy
-			PozycjaZamowienia pozycjaZamowienia = pozycje.getPozycjeMapa().get(pozycja);
-			logger.log(Level.SEVERE, "Wybrana pozycja z mapy: " + pozycjaZamowienia);
-
-			// dodajemy wybraną pozycje do zamowienia
-			zamowienie.dodajPozycje(pozycjaZamowienia);
-
-		}
-		// koniec pętli
-		// wypisanie rachunku
-
-		float suma = 0;
-		// uzywajac for'a sumujemy ceny pozycji i przypisujemy do zmiennej suma
-		Set<PozycjaZamowienia> pozycjeZamowienia = zamowienie.getPozycje();
-		for (PozycjaZamowienia pozycjaZamowienia : pozycjeZamowienia) {
-			float cena = pozycjaZamowienia.getCena();
-			suma += cena;
-			// suma += pozycjaZamowienia.getCena();// to samo co wyżeji
+			System.out.println("Do zapłaty:" + suma);
+			// skaner.close();
 		}
 
-		System.out.println("Do zapłaty:" + suma);
-		skaner.close();
+		//
 	}
 }

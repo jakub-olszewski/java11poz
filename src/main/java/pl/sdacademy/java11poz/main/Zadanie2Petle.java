@@ -22,7 +22,7 @@ public class Zadanie2Petle {
 		MapaPozycjiZamowienia mapaPozycji = new MapaPozycjiZamowienia();
 		// setter/getter
 		// pobralismy mape
-		Map<String, PozycjaZamowienia> mapa = mapaPozycji.getPozycjeMapa();
+		Map<Integer, PozycjaZamowienia> mapa = mapaPozycji.getPozycjeMapa();
 
 		// kolekcja jakiś zbiór
 		// wybrano metode value poniewaz tylko ona zwraca Collection
