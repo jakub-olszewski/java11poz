@@ -1,5 +1,6 @@
 package pl.sdacademy.java11poz.main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.logging.Level;
@@ -25,7 +26,7 @@ public class ProgramJadalnia {
 
 		int numerZamowienia = util.generujNumerZamowienia();
 		Zamowienie zamowienie = new Zamowienie(numerZamowienia);
-		int pozycja;
+		int pozycja = 0;
 		boolean warunekZakonczenia = true;
 		while (warunekZakonczenia) {
 			// start pętli
@@ -34,14 +35,34 @@ public class ProgramJadalnia {
 			// uzytkownik wybiera pozycje od 0 do 5
 			// TODO 1 obsłużenie wyjątku podczas wpisania nie prawidłowej pozycji np
 			// litery
-			pozycja = skaner.nextInt();
-			// TODO 2 walidacja liczba z zakresu od 0 do 5
+			boolean warunekZakonczeniaPobieraniaPozycji = true;
+
+			while (warunekZakonczeniaPobieraniaPozycji) {
+
+				try {
+					pozycja = skaner.nextInt();
+
+					// TODO 2 walidacja liczba z zakresu od 0 do 5
+					// uzycie operatorów matematycznych
+					// instrukcja warunkowa
+					boolean czyPozycjaIstniejeWZakresie = pozycja < 5 && pozycja >= 0;
+					if (czyPozycjaIstniejeWZakresie) {
+						warunekZakonczeniaPobieraniaPozycji = false;
+					}
+				}
+				catch (InputMismatchException e) {
+					System.out.println("Wyjątek obsłużony");
+					skaner = new Scanner(System.in);
+				}
+				System.out.println("Dalsze działanie programu...");
+			}
 
 			// TODO 3 warunek zakonczenia - to wpisanie zera
-			if ("Dziękuje".equals(pozycja)) {
+			if (pozycja == 0) {// == porównanie , = równość
 				warunekZakonczenia = false;
 				break;
 			}
+
 			logger.log(Level.SEVERE, "Wybrana pozycja: " + pozycja);
 
 			// tworzymy mape pozycji
