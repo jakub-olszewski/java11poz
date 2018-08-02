@@ -13,7 +13,7 @@ public class Cwiczenie1 {
 	protected final static Logger logger = Logger.getLogger(PetlaFor2.class.getName()); // java.util.logging.Logger
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//
 
 		String[] pozycje = { "pizza1", "napoj8", "makaron3" };
 		List<String> pozycjeLista = Arrays.asList(pozycje);

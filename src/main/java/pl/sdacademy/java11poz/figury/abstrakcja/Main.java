@@ -59,7 +59,7 @@ public class Main extends MainClass {
 
 	@Override
 	protected void implementacjaProgramu() {
-		// TODO Auto-generated method stub
+		//
 
 	}
 }

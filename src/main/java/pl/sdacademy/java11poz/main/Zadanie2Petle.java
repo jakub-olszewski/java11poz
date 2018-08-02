@@ -15,7 +15,7 @@ public class Zadanie2Petle {
 			.getLogger(Zadanie2Petle.class.getName()); // java.util.logging.Logger
 
 	public static void main(String[] args) {
-		// TODO wyszukanie pozycji zamowienia po nazwie/kluczu
+		// wyszukanie pozycji zamowienia po nazwie/kluczu
 
 		// przeszukanie mapy w poszukiwaniu nazwy pozycji
 

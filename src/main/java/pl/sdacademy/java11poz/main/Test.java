@@ -3,7 +3,7 @@ package pl.sdacademy.java11poz.main;
 public class Test {
 
 	public Test() {
-		// TODO Auto-generated constructor stub
+		//
 	}
 
 	public static void main(String[] args) {

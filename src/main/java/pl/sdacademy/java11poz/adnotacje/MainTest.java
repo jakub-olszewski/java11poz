@@ -14,7 +14,7 @@ public class MainTest extends MainClass {
 
 	@Override
 	protected void implementacjaProgramu() {
-		// TODO Auto-generated method stub
+		//
 
 	}
 }

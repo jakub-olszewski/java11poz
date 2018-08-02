@@ -25,7 +25,7 @@ public class JadalniaUtil {
 		System.out.println("Wprowadź nazwisko:");
 		// pobieranie wprowadzonego nazwiska
 		String nazwisko = skaner.nextLine();
-		// TODO pobrac dane od uzytkownika i
+		// pobrac dane od uzytkownika i
 		// dopowiednio uzupelnic zmienne
 
 		// pobieramy ze skanera
@@ -75,7 +75,6 @@ public class JadalniaUtil {
 	}
 
 	public int generujNumerZamowienia() {
-		// TODO
 		return 0;
 	}
 
@@ -88,6 +87,8 @@ public class JadalniaUtil {
 		System.out.println("1. Pizza Margarita");
 		System.out.println("2. Pizza Poznanska");
 		System.out.println("3. Pizza Krakowska");
+		System.out.println("");
+		System.out.println("0. Wyjście");
 		System.out.println("===============================");
 		System.out.println("Wybór:");
 

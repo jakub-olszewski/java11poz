@@ -16,14 +16,14 @@ public class Tablice {
 	 * 
 	 */
 	public Tablice() {
-		// TODO Auto-generated constructor stub
+		//
 	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//
 
 		PozycjaZamowienia[] pozycjeWZamowieniu = new PozycjaZamowienia[10];
 		PozycjaZamowienia noweZamowienie = new PozycjaZamowienia("Pizza", 12.99f);
@@ -37,7 +37,7 @@ public class Tablice {
 		// wypisującej adres obiektu w pamięci
 		System.out.println(pozycjeWZamowieniu[2]);
 
-		// TODO utworz tablice liczb double
+		// utworz tablice liczb double
 		double[] tablicaLiczb = new double[10];
 
 		// przypisanie wartosci do pozycji w tablicy
@@ -47,7 +47,7 @@ public class Tablice {
 		// wypisanie
 		System.out.println(tablicaLiczb[2]);
 
-		// TODO utworz tablice miast
+		// utworz tablice miast
 		// indeks podczas tworzenia 10
 		// daje na 10 pozycji od 0 do 9
 		Miasto[] tablicaMiast = new Miasto[10];

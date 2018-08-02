@@ -13,7 +13,7 @@ public class PetlaFor {
 	protected final static Logger logger = Logger.getLogger(PetlaFor.class.getName()); // java.util.logging.Logger
 
 	public static void main(String[] args) {
-		// TODO utworz tablice liczb::float 6 elementow
+		// utworz tablice liczb::float 6 elementow
 
 		float[] tablicaLiczb = { 99f, 45f, 101f, 78f, 32f, 6f };
 
@@ -31,7 +31,7 @@ public class PetlaFor {
 			float f = tablicaLiczb[i];
 
 		}
-		// TODO uzywajac petli for wypisz elementy tablicy
+		// uzywajac petli for wypisz elementy tablicy
 		logger.log(Level.INFO, "Przetwarzam {} elementów  " + tablicaLiczb.length);
 
 	}

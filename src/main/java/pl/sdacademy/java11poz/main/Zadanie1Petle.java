@@ -23,7 +23,7 @@ public class Zadanie1Petle {
 	public static void main(String[] args) {
 
 		String[] imiona = { "Anton", "Antonina", "Julia", "Jarek", "Mateusz", "Tomasz",
-				"Irena", "Emil", "Robert", "Milena" };// TODO dopisz imiona
+				"Irena", "Emil", "Robert", "Milena" };//
 
 		// for (String imie : imiona) {
 		// if (czyImieZawieraLitereA(imie)) {

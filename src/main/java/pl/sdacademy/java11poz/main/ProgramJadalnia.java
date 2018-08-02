@@ -25,16 +25,19 @@ public class ProgramJadalnia {
 
 		int numerZamowienia = util.generujNumerZamowienia();
 		Zamowienie zamowienie = new Zamowienie(numerZamowienia);
-		String pozycja;
+		int pozycja;
 		boolean warunekZakonczenia = true;
 		while (warunekZakonczenia) {
 			// start pętli
 			// przedstawiamy menu
 			util.wypiszMenu();
-			// uzytkownik wybiera pozycje
-			// pozycja = Integer.parseInt(skaner.nextLine());
-			pozycja = skaner.nextLine();
-			// warunek zakonczenia - słowo "dziekuje"
+			// uzytkownik wybiera pozycje od 0 do 5
+			// TODO 1 obsłużenie wyjątku podczas wpisania nie prawidłowej pozycji np
+			// litery
+			pozycja = skaner.nextInt();
+			// TODO 2 walidacja liczba z zakresu od 0 do 5
+
+			// TODO 3 warunek zakonczenia - to wpisanie zera
 			if ("Dziękuje".equals(pozycja)) {
 				warunekZakonczenia = false;
 				break;

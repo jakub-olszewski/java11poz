@@ -24,16 +24,12 @@ public class Main {
 		obsluga.dodajPojazd(juliaHulajnoga);
 		obsluga.dodajPojazd(juliaSamochod);
 
-		// wykorzystaj stream stream
-		// for (Pojazd pojazd : pojazdy) {
-		// obsluga.aktualizujPojazd(pojazd);
-		// obsluga.wypiszIPoruszajSie();
-		// }
-
 		obsluga.aktualizujWypiszPojazdy();
 
 		// podaj ilość pojazdów - utworz metode w obsludze
-
+		int iloscPojazdow = obsluga.zliczPojazdy();
+		System.out.println("ilosc:" + iloscPojazdow);
+		obsluga.sumaPojazdow();
 	}
 
 }

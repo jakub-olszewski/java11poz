@@ -98,7 +98,6 @@ public class UserImpl implements User {
 	 */
 	@Override
 	public void wypiszStatus() {
-		// TODO wypisz status syso
 		if (status == null) {
 			System.out.println("status jest null");
 			return;

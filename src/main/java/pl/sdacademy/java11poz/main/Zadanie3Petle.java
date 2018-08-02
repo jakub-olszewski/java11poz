@@ -14,7 +14,7 @@ public class Zadanie3Petle {
 			.getLogger(Zadanie3Petle.class.getName()); // java.util.logging.Logger
 
 	public static void main(String[] args) {
-		// TODO wyszukanie pozycji zamowienia po nazwie/kluczu
+		// wyszukanie pozycji zamowienia po nazwie/kluczu
 		logger.log(Level.INFO, "Napoje: ==================================");
 		String nazwaSzukana = "Napoj";
 		wyszukajPozycjeZamowieniaPoNazwie(nazwaSzukana);
