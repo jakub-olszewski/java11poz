@@ -11,6 +11,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import pl.sdacademy.java11poz.jadalnia.MapaPozycjiZamowienia;
@@ -65,7 +66,21 @@ public class AplikacjaSwing {
 		frame.setLayout(new BorderLayout());
 		frame.add(button, BorderLayout.LINE_END);
 		frame.add(new JButton("North"), BorderLayout.NORTH);
-		frame.add(new JButton("South"), BorderLayout.SOUTH);
+		JButton wybierzButton = new JButton("Wybierz");
+
+		wybierzButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (countryList.getSelectedValue() == null) {
+					JOptionPane.showMessageDialog(null, "Wybierz opcje z listy");
+				}
+				logger.info("Selected value: " + countryList.getSelectedValue());
+
+			}
+		});
+
+		frame.add(wybierzButton, BorderLayout.SOUTH);
 		frame.add(new JButton("East"), BorderLayout.EAST);
 		frame.add(new JButton("West"), BorderLayout.WEST);
 		frame.add(countryList, BorderLayout.CENTER);
