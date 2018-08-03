@@ -45,14 +45,11 @@ public class AplikacjaSwing {
 		MapaPozycjiZamowienia mapaPozycji = new MapaPozycjiZamowienia();
 		Collection<PozycjaZamowienia> kolekcjaPozycji = mapaPozycji.getPozycjeMapa()
 				.values();
-		listModel.addElement("USA");
-		listModel.addElement("India");
-		listModel.addElement("Vietnam");
-		listModel.addElement("Canada");
-		listModel.addElement("Denmark");
-		listModel.addElement("France");
-		listModel.addElement("Great Britain");
-		listModel.addElement("Japan");
+
+		for (PozycjaZamowienia pozycjaZamowienia : kolekcjaPozycji) {
+			String nazwa = pozycjaZamowienia.getNazwa();
+			listModel.addElement(nazwa);
+		}
 
 		// create the list
 		JList countryList = new JList<>(listModel);
@@ -75,6 +72,8 @@ public class AplikacjaSwing {
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		// zamienic button South na 'Wybierz' i po kliknieciu wypisuje
+		// wybrana pozycję
 	}
 
 }
