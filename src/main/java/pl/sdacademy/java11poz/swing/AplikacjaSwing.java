@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 import javax.swing.DefaultListModel;
@@ -66,27 +67,31 @@ public class AplikacjaSwing {
 		frame.add(button, BorderLayout.LINE_END);
 		frame.add(textField, BorderLayout.NORTH);
 		JButton wybierzButton = new JButton("Wybierz");
+		float suma = 0;
 
-		wybierzButton.addActionListener(new ActionListener() {
+		wybierzButton.addActionListener((e) -> {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if (countryList.getSelectedValue() == null) {
-					JOptionPane.showMessageDialog(null, "Wybierz opcje z listy");
-				}
-				logger.info("Selected value: " + countryList.getSelectedValue());
-				float suma = 0;
-				float cena = 0;
-				Object nazwa = countryList.getSelectedValue();
-				// po nazwie pobieramy PozycjeZamowienia
-				// kolekcjaPozycji.stream().filter(pozycja -> )
-
-				// majac pozycjeZamowienia mozemy pobrac cene
-				// majac cene mozemy dodac do sumy
-				String pozycjaSformatowana = String.format("%.2f zł | %s | Suma:", cena,
-						nazwa, suma);
-				textField.setText("Wybrano:" + pozycjaSformatowana);
+			if (countryList.getSelectedValue() == null) {
+				JOptionPane.showMessageDialog(null, "Wybierz opcje z listy");
 			}
+			logger.info("Selected value: " + countryList.getSelectedValue());
+			float cena = 0;
+			final Object nazwa = countryList.getSelectedValue();
+			// po nazwie pobieramy PozycjeZamowienia
+			Optional<PozycjaZamowienia> filtrowaneZamowienieOptional = kolekcjaPozycji
+					.stream().filter(pozycja -> pozycja.getNazwa()
+							.compareToIgnoreCase(nazwa.toString()) == 0)
+					.findFirst();
+			PozycjaZamowienia pozycjaZamowienia = filtrowaneZamowienieOptional.get();
+			cena = pozycjaZamowienia.getCena();
+			suma += cena;
+			// nazwa = pozycjaZamowienia.getNazwa();
+
+			// majac pozycjeZamowienia mozemy pobrac cene
+			// majac cene mozemy dodac do sumy
+			String pozycjaSformatowana = String.format("%.2f zł | %s | Suma: %.2f zł",
+					cena, nazwa, suma);
+			textField.setText("Wybrano:" + pozycjaSformatowana);
 		});
 
 		frame.add(wybierzButton, BorderLayout.SOUTH);
