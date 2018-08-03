@@ -28,7 +28,7 @@ public class AplikacjaSwing {
 		JFrame frame = new JFrame(title);
 
 		// przycisk
-		String label = "Click me!";
+		String label = "Do kasy";
 		JButton button = new JButton(label);
 		button.addActionListener(new ActionListener() {
 
@@ -56,8 +56,7 @@ public class AplikacjaSwing {
 		JList countryList = new JList<>(listModel);
 		frame.add(countryList);
 
-		JTextField textField = new JTextField("This is a text", 20);
-		frame.add(textField);
+		JTextField textField = new JTextField("Informacje", 20);
 
 		countryList.setBackground(Color.green);
 		frame.setVisible(true);// ustawienie widoczności okienka
@@ -65,7 +64,7 @@ public class AplikacjaSwing {
 		// frame.setLayout(new GridLayout(4, 2));
 		frame.setLayout(new BorderLayout());
 		frame.add(button, BorderLayout.LINE_END);
-		frame.add(new JButton("North"), BorderLayout.NORTH);
+		frame.add(textField, BorderLayout.NORTH);
 		JButton wybierzButton = new JButton("Wybierz");
 
 		wybierzButton.addActionListener(new ActionListener() {
@@ -76,7 +75,7 @@ public class AplikacjaSwing {
 					JOptionPane.showMessageDialog(null, "Wybierz opcje z listy");
 				}
 				logger.info("Selected value: " + countryList.getSelectedValue());
-
+				textField.setText("Wybrano:" + countryList.getSelectedValue());
 			}
 		});
 
