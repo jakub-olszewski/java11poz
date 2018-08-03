@@ -75,7 +75,17 @@ public class AplikacjaSwing {
 					JOptionPane.showMessageDialog(null, "Wybierz opcje z listy");
 				}
 				logger.info("Selected value: " + countryList.getSelectedValue());
-				textField.setText("Wybrano:" + countryList.getSelectedValue());
+				float suma = 0;
+				float cena = 0;
+				Object nazwa = countryList.getSelectedValue();
+				// po nazwie pobieramy PozycjeZamowienia
+				// kolekcjaPozycji.stream().filter(pozycja -> )
+
+				// majac pozycjeZamowienia mozemy pobrac cene
+				// majac cene mozemy dodac do sumy
+				String pozycjaSformatowana = String.format("%.2f zł | %s | Suma:", cena,
+						nazwa, suma);
+				textField.setText("Wybrano:" + pozycjaSformatowana);
 			}
 		});
 

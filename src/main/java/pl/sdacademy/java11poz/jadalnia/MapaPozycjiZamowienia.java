@@ -25,10 +25,10 @@ public class MapaPozycjiZamowienia {
 		// zmiennaMapa.put(klucz, wartość);
 		// put wstaw wartość
 		pozycjeMapa.put(1, new PozycjaZamowienia("Pizza Margarita", 15.50f));
-		pozycjeMapa.put(2, new PozycjaZamowienia("Pizza Poznańska", 17.50f));
+		pozycjeMapa.put(2, new PozycjaZamowienia("Pizza Poznańska", 17.58f));
 		pozycjeMapa.put(3, new PozycjaZamowienia("Pizza Krakowska", 20.50f));
 		pozycjeMapa.put(4, new PozycjaZamowienia("Napoj Piwo Tyskie", 10.50f));
-		pozycjeMapa.put(5, new PozycjaZamowienia("Napoj Pepsi Cola", 2.50f));
+		pozycjeMapa.put(5, new PozycjaZamowienia("Napoj Pepsi Cola", 2.99f));
 
 	}
 
