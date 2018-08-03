@@ -44,4 +44,6 @@ public interface User {
 
 	public void setNumerTelefonu(String numerTelefonu);
 
+	public String getNumerTelefonu();
+
 }

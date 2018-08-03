@@ -32,10 +32,11 @@ public class JadalniaUtil {
 		User uzytkownik = new UserImpl(imie, nazwisko);
 
 		boolean warunekPoprawnegoNumeruTelefonu = true;
+		String numerTelefonu = null;
 		while (warunekPoprawnegoNumeruTelefonu) {
 
 			System.out.println("Wprowadź numer telefonu:");
-			String numerTelefonu = skaner.nextLine();
+			numerTelefonu = skaner.nextLine();
 			// sprawdzamy czy jest zgodny z wzorcem wyrazenia regularnego
 			// w przypadku niezgodnosci zrzucamy wyjatek
 			try {
@@ -50,7 +51,7 @@ public class JadalniaUtil {
 			// prosimy o ponowne wpisanie numeru telefonu (pętla)
 		}
 
-		uzytkownik.setNumerTelefonu("234234");
+		uzytkownik.setNumerTelefonu(numerTelefonu);
 		logger.log(Level.SEVERE, uzytkownik.toString());
 		return uzytkownik;
 	}

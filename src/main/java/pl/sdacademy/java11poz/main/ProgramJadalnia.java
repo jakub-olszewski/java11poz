@@ -21,6 +21,9 @@ public class ProgramJadalnia {
 		while (true) {
 			skaner = new Scanner(System.in);
 			JadalniaUtil util = new JadalniaUtil(skaner);
+			System.out.println("=============================================");
+			System.out.println("====== W i t a m y   w   J a d a l n i ======");
+			System.out.println("=============================================");
 
 			// tworzymy zamowienie dla nowego uzytkownika
 			User uzytkownik = util.nowyUzytkownik();
@@ -54,10 +57,11 @@ public class ProgramJadalnia {
 						}
 					}
 					catch (InputMismatchException e) {
-						System.out.println("Wyjątek obsłużony");
+						System.out.println(
+								"Nie prawidłowa pozycja! Proszę o wybranie pozycji 0-5");
 						skaner = new Scanner(System.in);
 					}
-					System.out.println("Dalsze działanie programu...");
+					// System.out.println("Dalsze działanie programu...");
 				}
 
 				// TODO 3 warunek zakonczenia - to wpisanie zera
@@ -77,6 +81,8 @@ public class ProgramJadalnia {
 
 				// dodajemy wybraną pozycje do zamowienia
 				zamowienie.dodajPozycje(pozycjaZamowienia);
+				logger.log(Level.SEVERE,
+						"ilosc pozycji: " + zamowienie.getPozycje().size());
 
 			}
 			// koniec pętli
@@ -90,8 +96,13 @@ public class ProgramJadalnia {
 				suma += cena;
 				// suma += pozycjaZamowienia.getCena();// to samo co wyżeji
 			}
-
-			System.out.println("Do zapłaty:" + suma);
+			System.out.println("----------------------------");
+			System.out.println(uzytkownik.pobierzImieINazwisko());
+			System.out.println(uzytkownik.getDataLogowania());
+			System.out.println(uzytkownik.getNumerTelefonu());
+			System.out.printf("Do zapłaty   %.2f zł%n", suma);
+			System.out.printf("Podatek 3%%   %.2f zł%n", (suma * .03));
+			System.out.println("----------------------------");
 			// skaner.close();
 		}
 
