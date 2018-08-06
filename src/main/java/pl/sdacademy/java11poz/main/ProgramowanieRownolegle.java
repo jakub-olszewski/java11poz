@@ -1,5 +1,8 @@
 package pl.sdacademy.java11poz.main;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class ProgramowanieRownolegle {
 
 	public static void main(String[] args) {
@@ -13,6 +16,21 @@ public class ProgramowanieRownolegle {
 				System.out.println("Runnable r1 run...");
 				// dla chętnych użycie stream i filter
 				// implementacja podzielności przez 2 i 5 liczb od 0 do 100
+
+				// pętla
+				for (int i = 0; i < 100; i++) {
+					System.out.println("+Runnable r1");
+				}
+
+				// stream
+				// @formatter:off
+				IntStream.
+					range(0, 100).
+					filter(i -> (i + 1) % 2 == 0).
+					mapToObj(i -> i).
+					collect(Collectors.toList());
+				// @formatter:on
+
 				System.out.println("Runnable r1 stop.");
 			}
 		};
@@ -23,6 +41,9 @@ public class ProgramowanieRownolegle {
 			// implementacja sumy kwadratów dwóch kolejnych liczb od 0 do 100
 			// 0 to będzie 0^2 + 1^2
 			// 1 to będzie 1^2 + 2^2
+			for (int i = 0; i < 100; i++) {
+				System.out.println("-Runnable r2 ");
+			}
 			System.out.println("Runnable r2 stop.");
 		};
 
