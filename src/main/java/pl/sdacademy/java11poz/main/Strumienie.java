@@ -35,11 +35,19 @@ public class Strumienie {
 		}
 	}
 
+	/**
+	 * Metoda do kopiowania danych
+	 * @param input strumień wejsciowy
+	 * @param output strumien wyjsciowy
+	 * @throws IOException zrzucany wyjatek podczas zapisu/odczytu
+	 */
 	private static void copy(Reader input, Writer output) throws IOException {
 
-		int c;
-		while ((c = input.read()) != -1) {
-			output.write(c);
+		int znak;// dowolny znak kopiowany z input do output
+		// int ponieważ w tablicy ASCII
+		// jesteśmy wstanie odczytać każdy znak w reprezentacji liczbowej
+		while ((znak = input.read()) != -1) {// więcej https://pl.wikipedia.org/wiki/EOF
+			output.write(znak);// do output wpisujemy znak po znaku z pliku wejsciowego
 		}
 
 	}
