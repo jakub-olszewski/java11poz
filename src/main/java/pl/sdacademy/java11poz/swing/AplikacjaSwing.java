@@ -84,7 +84,7 @@ public class AplikacjaSwing {
 					.findFirst();
 			PozycjaZamowienia pozycjaZamowienia = filtrowaneZamowienieOptional.get();
 			cena = pozycjaZamowienia.getCena();
-			suma += cena;
+			// suma += cena;
 			// nazwa = pozycjaZamowienia.getNazwa();
 
 			// majac pozycjeZamowienia mozemy pobrac cene
