@@ -17,16 +17,34 @@ public class ProgramowanieRownolegle {
 				// dla chętnych użycie stream i filter
 				// implementacja podzielności przez 2 i 5 liczb od 0 do 100
 
+				// wypisz liczby od 0 do 100
+				for (int index = 0; index < 100000; index++) {
+					System.out.println("+Runnable r1 " + index);
+				}
+				// index w skrócie literka 'i'
+
 				// pętla
 				for (int i = 0; i < 100; i++) {
-					System.out.println("+Runnable r1");
+					boolean podzielnePrzezDwa = i % 2 == 0;
+					boolean podzielnePrzezPiec = i % 5 == 0;
+
+					boolean warunek = podzielnePrzezDwa && podzielnePrzezPiec;// && - i ||
+																				// - lub
+					// boolean warunek = i % 2 == 0 && i % 5 == 0;
+
+					// spelnienie warunku
+					if (warunek) {
+						// wypisanie liczby spelniajacej warunek
+						System.out.println("+Runnable r1 liczba : " + i);
+
+					}
 				}
 
-				// stream
+				// stream dla chętnych do dokończenia
 				// @formatter:off
 				IntStream.
 					range(0, 100).
-					filter(i -> (i + 1) % 2 == 0).
+					filter(i -> i % 2 == 0 && i % 5 == 0).
 					mapToObj(i -> i).
 					collect(Collectors.toList());
 				// @formatter:on
@@ -35,14 +53,19 @@ public class ProgramowanieRownolegle {
 			}
 		};
 
-		// implementacja z użyciem lambda
+		// implementacja z użyciem lambda () -> { //blok kodu }
 		Runnable wykonanieImpl2 = () -> {
 			System.out.println("Runnable r2 run...");
 			// implementacja sumy kwadratów dwóch kolejnych liczb od 0 do 100
-			// 0 to będzie 0^2 + 1^2
-			// 1 to będzie 1^2 + 2^2
-			for (int i = 0; i < 100; i++) {
-				System.out.println("-Runnable r2 ");
+			// i=0 to będzie 0^2 + 1^2
+			// i=1 to będzie 1^2 + 2^2
+			// i=2 to będzie 2^2 + 3^2
+			// wzór ogólny dla kazdego i będzie i^2 + (i+1)^2
+			// petla start i=0 konczy sie gdy i<10000 a krok wykonania jednego przejscia
+			// i+1
+			for (int i = 0; i < 100000; i++) {
+				int obliczenie = i ^ 2 + (i + 1) ^ 2;// ^ - potęga
+				System.out.println("-Runnable r2 " + obliczenie);
 			}
 			System.out.println("Runnable r2 stop.");
 		};
