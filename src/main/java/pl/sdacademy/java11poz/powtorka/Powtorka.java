@@ -10,7 +10,7 @@ public class Powtorka {
 		 * lambdy</br>
 		 * petle</br>+
 		 * stream</br>
-		 * data i formatery</br>
+		 * data i formatery</br>+
 		 * wyjątki różnica throw a catch</br>+
 		 * tablice</br>+
 		 * listy operacje</br>+
