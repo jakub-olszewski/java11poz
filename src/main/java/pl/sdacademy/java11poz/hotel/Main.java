@@ -1,5 +1,6 @@
 package pl.sdacademy.java11poz.hotel;
 
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class Main {
@@ -33,13 +34,41 @@ public class Main {
 
 		// TODO zadanie 4 Wyjątki
 		// zrzuć wyjątek gdy napis jest nullem w metodzie dlugoscNapisu()
-		dlugoscNapisu("Ala ma kota");
+
 		String text = null;
-		dlugoscNapisu(text);
+		dlugoscNapisu(Optional.ofNullable(text));
+		try {
+			dlugoscNapisu(text);
+
+			dlugoscNapisu("Ala ma kota");
+		}
+		catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+
 	}
 
+	/**
+	 * Wykorzystać optional
+	 * @param napis
+	 */
 	private static void dlugoscNapisu(String napis) {
-		System.out.println(0);
+		if (napis == null) {
+			throw new IllegalArgumentException("Napis jest nullem");
+		}
+		else {
+			System.out.println("Długosc napisu: " + napis.length());
+		}
+	}
+
+	/**
+	 * Wykorzystać optional
+	 * @param napis
+	 */
+	private static void dlugoscNapisu(Optional<String> napisOptional) {
+		if (napisOptional.isPresent()) {
+			System.out.println("Długosc napisu: " + napisOptional.get().length());
+		}
 	}
 
 	private static void tabliczkaMnozeniaPrzez3Wersja3() {

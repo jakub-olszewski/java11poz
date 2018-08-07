@@ -11,7 +11,10 @@ public class Powtorka {
 		 * stream</br>
 		 * data i formatery</br>
 		 * wyjątki różnica throw a catch</br>
-		 * zadania dodatkowe</br>
+		 * tablice</br>
+		 * listy operacje</br>
+		 * if else, if else if,</br>
+		 * optional</br>
 		 */
 	}
 
