@@ -14,7 +14,7 @@ public class Powtorka {
 		 * wyjątki różnica throw a catch</br>+
 		 * tablice</br>+
 		 * listy operacje</br>+
-		 * if else, if else if,</br>
+		 * if else, if else if,</br>+
 		 * optional</br>+
 		 */
 		// @formatter:on
