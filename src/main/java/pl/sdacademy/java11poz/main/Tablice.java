@@ -26,6 +26,7 @@ public class Tablice {
 		//
 
 		PozycjaZamowienia[] pozycjeWZamowieniu = new PozycjaZamowienia[10];
+
 		PozycjaZamowienia noweZamowienie = new PozycjaZamowienia("Pizza", 12.99f);
 		pozycjeWZamowieniu[2] = noweZamowienie;
 

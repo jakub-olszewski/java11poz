@@ -37,14 +37,8 @@ public class Main {
 
 		String text = null;
 		dlugoscNapisu(Optional.ofNullable(text));
-		try {
-			dlugoscNapisu(text);
-
-			dlugoscNapisu("Ala ma kota");
-		}
-		catch (Exception e) {
-			System.err.println(e.getMessage());
-		}
+		dlugoscNapisu(text);
+		dlugoscNapisu("Ala ma kota");
 
 	}
 
@@ -53,12 +47,7 @@ public class Main {
 	 * @param napis
 	 */
 	private static void dlugoscNapisu(String napis) {
-		if (napis == null) {
-			throw new IllegalArgumentException("Napis jest nullem");
-		}
-		else {
-			System.out.println("Długosc napisu: " + napis.length());
-		}
+		dlugoscNapisu(Optional.ofNullable(napis));
 	}
 
 	/**
@@ -68,6 +57,9 @@ public class Main {
 	private static void dlugoscNapisu(Optional<String> napisOptional) {
 		if (napisOptional.isPresent()) {
 			System.out.println("Długosc napisu: " + napisOptional.get().length());
+		}
+		else {
+			System.err.println("Napis jest null!");
 		}
 	}
 

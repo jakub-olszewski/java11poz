@@ -5,16 +5,17 @@ public class Powtorka {
 	public Powtorka() {
 		/**
 		 * Operatory </br>
-		 * logiczne</br>
-		 * lambdy</br>
+		 * + logiczne</br>
+		 * + lambdy</br>
 		 * petle</br>
-		 * stream</br>
+		 * + stream</br>
 		 * data i formatery</br>
 		 * wyjątki różnica throw a catch</br>
-		 * tablice</br>
-		 * listy operacje</br>
-		 * if else, if else if,</br>
+		 * + tablice</br>
+		 * + listy operacje</br>
+		 * + if else, if else if,</br>
 		 * optional</br>
+		 * +
 		 */
 	}
 

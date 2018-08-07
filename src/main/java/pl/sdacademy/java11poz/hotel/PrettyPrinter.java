@@ -6,4 +6,7 @@ public class PrettyPrinter {
 		System.out.println(liczba + "x" + i + "=" + liczba * i);
 	}
 
+	public static void wypisz(int i) {
+		System.out.println("-> element :" + i);
+	}
 }
