@@ -6,7 +6,6 @@ package pl.sdacademy.java11poz.main;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -16,7 +15,10 @@ import java.util.Date;
 public class FormatDaty {
 
 	/**
-	 * 
+	 * Mamy SimpleDateFormat Formater posiada konstruktor przyjmujący format/wzór/pattern
+	 * np "yyyy-MM-dd" Posiada metody:</br>
+	 * - parse() - zmienia napis na date</br>
+	 * - format() - zmiana date na napis</br>
 	 */
 	public FormatDaty() {
 	}
@@ -27,25 +29,36 @@ public class FormatDaty {
 	 */
 	public static void main(String[] args) throws ParseException {
 
-		// "dd.MM.yyyy HH:mm:ss"
-		wypiszDateWFormacie("2018-07-23", "yyyy-MM-dd");
-		wypiszDateWFormacie("23.07.2018 16:05:00", "dd.MM.yyyy HH:mm:ss");
-
 		// błędny format
 		// wypiszDateWFormacie("kurs", "dd.MM.ss");
 
 		String format = "MM/dd/yyyy HH:mm:ss";
 		Date data = new Date();// nowa data to obecna data
-		wypiszStringZDatyWFormacie(data, format);
+		System.out.println("2018-01-01" + " " + "yyyy-MM-dd");
+
+		Date dataZFormatu = utworzDateZNapisuWFormacie("2018-01-01", "yyyy-MM-dd");// parse()
+																					// zmieniamy
+																					// napis
+																					// na
+																					// date
+		System.out.println(dataZFormatu);
+		wypiszStringZDatyWFormacie(dataZFormatu, format);
 	}
 
+	/**
+	 * Metoda zmienia date na napis w danym formacie
+	 * @param data
+	 * @param format
+	 */
 	private static void wypiszStringZDatyWFormacie(Date data, String format) {
+
+		// date formater służący do formatowania daty w danym formacie
 		DateFormat df = new SimpleDateFormat(format);
 
-		Date today = Calendar.getInstance().getTime();
+		// date zamieniamy na napis w danym formacie przy użyciu formatera df
+		String reportDate = df.format(data);
 
-		String reportDate = df.format(today);
-
+		// wypisujemy napis
 		System.out.println("Data: " + reportDate);
 	}
 
@@ -56,7 +69,7 @@ public class FormatDaty {
 	 * wówczas gdy zamiast daty jako argument zostanie podany napis niezgodny z formatem _
 	 * daty
 	 */
-	public static void wypiszDateWFormacie(String napisData, String formatDaty)
+	public static Date utworzDateZNapisuWFormacie(String napisData, String formatDaty)
 			throws ParseException {
 		// data wprowadzona np. w formularzu
 		// String napisData = "2018-07-23";
@@ -66,10 +79,7 @@ public class FormatDaty {
 
 		// parse - przeksztalcic
 		// przekształcamy napis (String) w date (Date)
-		Date dataPrzeksztalconaZNapisu = dateFormat.parse(napisData);
-
-		System.out.println(dataPrzeksztalconaZNapisu);
-		System.out.println(new Date());
+		return dateFormat.parse(napisData);
 
 	}
 
