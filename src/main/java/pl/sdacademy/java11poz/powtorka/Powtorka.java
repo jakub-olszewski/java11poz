@@ -4,8 +4,14 @@ public class Powtorka {
 
 	public Powtorka() {
 		/**
-		 * Operatory logiczne lambdy petle
-		 * 
+		 * Operatory </br>
+		 * logiczne</br>
+		 * lambdy</br>
+		 * petle</br>
+		 * stream</br>
+		 * data i formatery</br>
+		 * wyjątki różnica throw a catch</br>
+		 * zadania dodatkowe</br>
 		 */
 	}
 
